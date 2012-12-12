@@ -6,7 +6,7 @@
 # location
 #
 
-PROGRAM = arith
+PROGRAM = fl_test
 
 #
 # Command line parameters: Edit these parameters so that you can 
