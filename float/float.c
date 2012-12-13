@@ -13,6 +13,31 @@
 /// tester main
 int main(void)
 {
+	float sensor;
+	float compensation;
+	double final_value;
+
+	sensor = 1.123;
+	compensation = 1.345;
+
+	printf("sensor %.8f, compensation %.8f\n", sensor, compensation);
+
+	if ( sensor == 1.123) 
+		printf("sensor ok\n");
+	else 
+		printf("sensor error\n");
+
+	final_value = sensor + compensation;
+
+	printf("final_value = %.8f\n", final_value);
+
+	if ( final_value == 2.468 ) 
+		printf("data ok\n");
+	else 
+		printf("data error\n");
+
+
+#if 0
 	double lotto = 1.0e10;
 	double tax = lotto * 33.0/100.0;
 	double result;
@@ -35,6 +60,7 @@ int main(void)
 	else 
 		printf("error\n");
 
+#endif 
 	return 0;
 }
 /********** end of file **********/
