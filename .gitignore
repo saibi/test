@@ -1,0 +1,9 @@
+*.o
+*.bak
+*~
+*.a
+*.out
+*.swp
+*.map
+tags
+
