@@ -1,4 +1,7 @@
 #include <iostream>
+#include <string.h>
+
+using namespace std;
 
 template <typename T, int Size = 100> class Stack
 {
@@ -71,6 +74,93 @@ private:
 
 
 
+#define MAX_ID_LENGTH 21
+
+template<> class Stack<char *>
+{
+public:
+	explicit Stack( int size )
+	{
+		m_Size = size;
+
+		m_ppData = new char * [m_Size];
+		for( int i = 0 ; i < m_Size; ++ i )
+		{
+			m_ppData[i] = new char[MAX_ID_LENGTH];
+		}
+
+		Clear();
+	}
+
+	~Stack()
+	{
+		for (int i = 0 ; i < m_Size; ++i)
+		{
+			delete [] m_ppData[i];
+		}
+
+		delete [] m_ppData;
+	}
+
+	void Clear()
+	{
+		m_Count = 0;
+	}
+
+	int Count()
+	{
+		return m_Count;
+	}
+
+	bool IsEmpty()
+	{
+		return 0 == m_Count ? true : false;
+	}
+
+
+	int GetStackSize()
+	{
+		return m_Size;
+	}
+
+
+	bool push(char * pID)
+	{
+		if ( m_Count >= m_Size )
+		{
+			return false;
+
+		}
+
+		strncpy(m_ppData[m_Count], pID, MAX_ID_LENGTH - 1);
+		m_ppData[m_Count][MAX_ID_LENGTH-1] = '\0';
+
+		++m_Count;
+
+		return true;
+	}
+
+	char * pop()
+	{
+		if ( m_Count < 1 )
+		{
+			return 0;
+		}
+
+		--m_Count;
+		return m_ppData[ m_Count ];
+	}
+
+private:
+	char **m_ppData;
+	int m_Count;
+
+	int m_Size;
+};
+
+
+
+
 #if 0
 const int MAX_EXP_COUNT = 100;
 
@@ -135,7 +225,6 @@ private:
 #endif 
 
 
-using namespace std;
 
 int main()
 {
@@ -167,6 +256,20 @@ int main()
 	Count = kStackMoney.Count();
 	for ( int i = 0 ; i < Count; ++i) {
 		cout << "money - " << kStackMoney.pop() << endl;
+	}
+
+	char GameID1[MAX_ID_LENGTH] = "Nice";
+	char GameID2[MAX_ID_LENGTH] = "Super";
+
+
+	Stack<char *> kStack2(64);
+
+	kStack2.push(GameID1);
+	kStack2.push(GameID2);
+
+	Count = kStack2.Count();
+	for ( int i = 0 ; i < Count; ++i) {
+		cout << "ID - " << kStack2.pop() << endl;
 	}
 
 	return 0;
