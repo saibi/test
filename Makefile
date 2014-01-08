@@ -6,7 +6,7 @@
 # location
 #
 
-PROGRAM = fl_test
+PROGRAM=use_tv
 
 #
 # Command line parameters: Edit these parameters so that you can 

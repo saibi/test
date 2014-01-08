@@ -58,14 +58,11 @@ private:
 
 inline bool Remote::volup(Tv & t) { return t.volup(); }
 inline bool Remote::voldown(Tv & t) { return t.voldown(); }
-inline bool Remote::onoff(Tv & t) { return t.onoff(); }
-inline bool Remote::chanup(Tv & t) { return t.chanup(); }
-inline bool Remote::chandown(Tv & t) { return t.chandown(); }
-inline bool Remote::set_mode(Tv & t) { return t.set_mode(); }
-inline bool Remote::set_input(Tv & t) { return t.set_input(); }
-inline bool Remote::set_chan(Tv & t, int c) { t.channel = c; }
-
-#endif
-
+inline void Remote::onoff(Tv & t) { return t.onoff(); }
+inline void Remote::chanup(Tv & t) { return t.chanup(); }
+inline void Remote::chandown(Tv & t) { return t.chandown(); }
+inline void Remote::set_mode(Tv & t) { return t.set_mode(); }
+inline void Remote::set_input(Tv & t) { return t.set_input(); }
+inline void Remote::set_chan(Tv & t, int c) { t.channel = c; }
 
 #endif
