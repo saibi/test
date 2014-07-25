@@ -29,3 +29,14 @@ void MainWindow::on_pushButton_clicked()
 
 
 }
+
+void MainWindow::on_pushButton_wps_clicked()
+{
+	QString wpsStr = ui->lineEdit_wps->text();
+
+	qDebug("wpsStr.contains = %d", wpsStr.contains("wps hole") ? 1 : 0);
+
+	const QString &arg1 = wpsStr.section(' ', 1, 1, QString::SectionSkipEmpty);
+
+	qDebug("%s", qPrintable(arg1));
+}

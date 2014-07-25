@@ -40,6 +40,28 @@
      <string>Test</string>
     </property>
    </widget>
+   <widget class="QWidget" name="widget_wps" native="true">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>150</y>
+      <width>249</width>
+      <height>49</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLineEdit" name="lineEdit_wps"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_wps">
+       <property name="text">
+        <string>Parsing wps</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -47,7 +69,7 @@
      <x>0</x>
      <y>0</y>
      <width>400</width>
-     <height>22</height>
+     <height>29</height>
     </rect>
    </property>
   </widget>
