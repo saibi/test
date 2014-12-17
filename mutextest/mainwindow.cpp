@@ -10,6 +10,8 @@
 
 #include "dataconverter.h"
 
+#include "motorhandler.h"
+
 MainWindow::MainWindow(QWidget *parent) :
 	QMainWindow(parent),
 	ui(new Ui::MainWindow)
@@ -105,7 +107,7 @@ void MainWindow::slot_sdMounted(QString mountPath)
 	DataConverter::digitalPattern_ScaleOneSide(list, 10.0 , DataConverter::DP_ONE_SIDE_SCALE_DOWN);
 
 	Notification::instance().notify(tr("SD Mounted"), 3);
-
+	MotorHandler::instance().test();
 }
 
 void MainWindow::slot_sdUnmounted()
@@ -115,7 +117,7 @@ void MainWindow::slot_sdUnmounted()
 
 	QPolygonF list = m_circleData;
 	DataConverter::digitalPattern_ScaleOneSide(list, -1.0 , DataConverter::DP_ONE_SIDE_SCALE_LEFT);
-
+	MotorHandler::instance().test();
 }
 
 
@@ -125,7 +127,7 @@ void MainWindow::slot_sdMounted2()
 
 	QPolygonF list = m_circleData;
 	DataConverter::digitalPattern_ScaleOneSide(list, 1.0 , DataConverter::DP_ONE_SIDE_SCALE_UP);
-
+	MotorHandler::instance().test();
 	Notification::instance().notify(tr("SD Mounted2"), 10);
 
 	DataConverter::digitalPattern_ScaleOneSide(list, 1.0 , DataConverter::DP_ONE_SIDE_SCALE_DOWN);
@@ -137,6 +139,7 @@ void MainWindow::slot_sdUnmounted2()
 	qDebug("[UI] [MainWindow::slot_sdUnMounted2]");
 	Notification::instance().notify(tr("SD Unmounted2"), 10);
 
+	MotorHandler::instance().test();
 	QPolygonF list = m_circleData;
 	DataConverter::digitalPattern_ScaleOneSide(list, 1.0 , DataConverter::DP_ONE_SIDE_SCALE_UP);
 
@@ -146,27 +149,9 @@ void MainWindow::slot_sdMounted3()
 {
 	qDebug("[UI] [MainWindow::slot_sdMounted3");
 	Notification::instance().notify(tr("SD Mounted3 - start"), 1);
-
-	QPolygonF list = m_circleData;
-	DataConverter::digitalPattern_Rotate(list, 30);
-	DataConverter::dumpPolygon(list);
-	DataConverter::digitalPattern_Rotate(list, -30);
-	DataConverter::dumpPolygon(list);
-	DataConverter::digitalPattern_Rotate(list, -1);
+	MotorHandler::instance().test();
 	Notification::instance().notify(tr("SD Mounted3 - mid"), 1);
 	QApplication::processEvents();
-	DataConverter::dumpPolygon(list);
-	DataConverter::digitalPattern_ScaleOneSide(list, 1.0 , DataConverter::DP_ONE_SIDE_SCALE_UP);
-	DataConverter::dumpPolygon(list);
-	DataConverter::digitalPattern_Rotate(list, -11);
-	DataConverter::dumpPolygon(list);
-	DataConverter::digitalPattern_ScaleOneSide(list, 1.0 , DataConverter::DP_ONE_SIDE_SCALE_LEFT);
-	DataConverter::dumpPolygon(list);
-	DataConverter::digitalPattern_ScaleOneSide(list, 30.0 , DataConverter::DP_ONE_SIDE_SCALE_RIGHT);
-	DataConverter::dumpPolygon(list);
-	DataConverter::digitalPattern_Rotate(list, 7.0);
-	DataConverter::dumpPolygon(list);
-
 	Notification::instance().notify(tr("SD Mounted3 - end"), 1);
 
 }
@@ -174,6 +159,8 @@ void MainWindow::slot_sdMounted3()
 void MainWindow::slot_sdUnmounted3()
 {
 	qDebug("[UI] [MainWindow::slot_sdUnMounted3]");
+	MotorHandler::instance().test();
+
 	Notification::instance().notify(tr("SD Unmounted3"), 1);
 
 	QPolygonF list = m_circleData;

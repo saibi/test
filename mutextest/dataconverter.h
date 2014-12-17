@@ -23,6 +23,10 @@ public:
 		DP_ONE_SIDE_SCALE_RIGHT,
 	};
 
+	static void makeCirclePolygon(QPolygonF &points, qreal radius);
+
+	static int countPrimes(int n);
+
 signals:
 
 public slots:

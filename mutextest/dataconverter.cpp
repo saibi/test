@@ -1,6 +1,7 @@
 #include "dataconverter.h"
 
 #include <QTransform>
+#include <qmath.h>
 
 DataConverter::DataConverter(QObject *parent) :
 	QObject(parent)
@@ -206,4 +207,39 @@ bool DataConverter::digitalPattern_Rotate(QPolygonF &points, qreal angle)
 	}
 
 	return true;
+}
+
+
+void DataConverter::makeCirclePolygon(QPolygonF &points, qreal radius)
+{
+	points.clear();
+
+	for (int i = 0; i < 1440; i++)
+	{
+		points.append( QPointF( radius * qSin( 2 *3.14145 * i / 1440.0), radius * qCos( 2 * 3.14159 * i / 1440.0 )) );
+	}
+}
+
+int DataConverter::countPrimes(int n)
+{
+	unsigned int i, j;
+	int countprimes = 0;
+
+	for ( i = 1; i <= n; i++ )
+	{
+		bool isprime = true;
+
+		for ( j = 2; j <= qSqrt(i); j++)
+		{
+			if ( ( i % j) == 0 )
+			{
+				isprime = false;
+				break;
+			}
+		}
+
+		if ( isprime ) countprimes++;
+
+	}
+	return countprimes;
 }

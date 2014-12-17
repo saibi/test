@@ -19,7 +19,8 @@ SOURCES += main.cpp\
     sdobserver.cpp \
     sdobserver2.cpp \
     sdobserver3.cpp \
-    dataconverter.cpp
+    dataconverter.cpp \
+    motorhandler.cpp
 
 HEADERS  += mainwindow.h \
     notification.h \
@@ -27,7 +28,8 @@ HEADERS  += mainwindow.h \
     sdobserver.h \
     sdobserver2.h \
     sdobserver3.h \
-    dataconverter.h
+    dataconverter.h \
+    motorhandler.h
 
 FORMS    += mainwindow.ui \
     notificationwidget.ui
