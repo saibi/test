@@ -17,7 +17,6 @@ int main(int argc, char *argv[])
 	w.show();
 
 
-	SdObserver::instance().startObserver();
 	SdObserver2::instance().startObserver();
 	SdObserver3::instance().startObserver();
 

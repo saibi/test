@@ -10,25 +10,11 @@ class SdObserver : public QThread
 {
     Q_OBJECT
 
-private:
-    explicit SdObserver(QObject *parent = 0);
-
-	Q_DISABLE_COPY(SdObserver)
-
 public:
-    static SdObserver& instance()
-    {
-        static SdObserver singletonInstance;
-        return singletonInstance;
-    }
+	explicit SdObserver(QObject *parent = 0);
 
-	bool startObserver(const QString &sdMountPath = QString("./mnt/sdcard"));
-
-    void stopObserver();
-
-    bool isMounted();
-
-	QString getMountPath();
+	bool startObserver(const QString & id = 0);
+	void stopObserver();
 
 protected:
     void run();
@@ -36,43 +22,21 @@ protected:
     //
     bool sdExists();
 
-    bool autoMount();
-
-    bool autoUnmount();
-
-	bool usbReaderConnected();
-	bool usbSdExists();
-	bool checkFdiskResultContains(QString contains);
-	QString getPartitionName(QString start_str, QString end_str);
-	bool usbAutoMount();
-	bool usbAutoUnmount();
-
 signals:
-    void signalSdMounted(QString sdMountPath);
-
+	void signalSdMounted();
     void signalSdUnmounted();
-	void signalSdMountError();
 
 public slots:
 
 private:
-    bool _stopFlag;
+	volatile bool _stopFlag;
 
     QMutex _mutex;
 
-    QString _sdMountPath;
-
     bool _sdFlag;
-
     bool _mountFlag;
 
-    QString _mmcblkFileName;
-
-    int _errorCount;
-
-	bool _usb_sd_flag;
-	QString _usbsd_dev_name;
-	bool _usb_mount_flag;
+	QString m_id;
 };
 
 #endif // SDOBSERVER_H

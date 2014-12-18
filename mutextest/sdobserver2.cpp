@@ -1,16 +1,15 @@
 #include "sdobserver2.h"
 
 #include <QMutexLocker>
-#include <QDir>
-#include <QFile>
-#include <QFileInfo>
-#include <QProcess>
+
+#include <QTime>
+#include "motorhandler.h"
 
 #define SD_CHECK_MSEC 1000
 
 SdObserver2::SdObserver2(QObject *parent) :
     QThread(parent),
-    _mutex(QMutex::Recursive)
+	_mutex(QMutex::NonRecursive)
 {
     _stopFlag = false;
 }
@@ -37,13 +36,18 @@ bool SdObserver2::startObserver()
 
 void SdObserver2::stopObserver()
 {
+	qDebug("[SdObserver2::stopObserver] Start.");
     QMutexLocker locker(&_mutex);
 
     _stopFlag = true;
 
-    locker.unlock();
+	locker.unlock();
+
+	qDebug("[SdObserver2::stopObserver] wait");
 
     wait();
+
+	qDebug("[SdObserver2::stopObserver] end");
 }
 
 void SdObserver2::run()
@@ -64,6 +68,10 @@ void SdObserver2::run()
     {
         if (_stopFlag)
             break;
+
+		if ( QTime::currentTime().second() % 10 == 0)
+			MotorHandler::instance().hello("observer2");
+
 
         sdFlag = sdExists();
 
@@ -93,8 +101,6 @@ void SdObserver2::run()
 
 	qDebug("[SdObserver2::run] Stop.");
 }
-
-#include <QTime>
 
 bool SdObserver2::sdExists()
 {
@@ -138,6 +144,7 @@ bool SdObserver2::sdExists()
 		return true;
 	else if ( QTime::currentTime().second() < 55 )
 		return false;
+
 
 	return true;
 }

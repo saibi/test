@@ -20,7 +20,9 @@ public:
 		return motorhandler;
 	}
 
-	void test();
+	void test(const QString & msg = 0);
+
+	void hello(const QString & msg = 0);
 
 signals:
 
