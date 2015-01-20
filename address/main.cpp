@@ -15,28 +15,114 @@ using namespace std;
 //	return a+b;
 //}
 
+
+class cat
+{
+public:
+	cat(int val = 0) : m_value(val)
+	{
+		cout << "cat() constructor, m_value = " << m_value << "\n";
+	}
+
+	~cat()
+	{
+		cout << "~cat()\n";
+	}
+
+	cat(const cat & r)
+	{
+		m_value = r.m_value;
+		cout << "cat()copy\n";
+	}
+
+	int get() const
+	{
+		return m_value;
+	}
+
+	void inc()
+	{
+		++m_value;
+	}
+
+	cat & operator++()
+	{
+		++m_value;
+		return *this;
+	}
+
+	cat operator++(int)
+	{
+		int prev = m_value;
+		++m_value;
+		return prev;
+	}
+
+	cat operator+(const cat & rhs) const
+	{
+		return (m_value + rhs.m_value);
+	}
+
+private:
+	int m_value;
+};
+
+cat operator+(int val, const cat & rhs)
+{
+	cat temp(val);
+	return temp + rhs;
+}
+
 int main()
 {
-	const int val = 7;
+	cout << "Hello World!" << endl;
 
-	const int *p = &val;
+	cat c1(10);
+	cat c2;
+
+	cout << c1.get() << endl;
+	c1.inc();
+	cout << c1.get() << endl;
+
+	c2 = c1++;
+	//c1++;
+	cout << c1.get() << endl;
+	cout << c2.get() << endl;
+
+	cat c3 = c1 + c2;
+	cout << c3.get() << endl;
+
+	cat c4 = c1 + 50;
+	cout << c4.get() << endl;
+
+	c3 = 20 + c1;
+
+//	int iValue = 10;
+//	int & rValue = iValue;
+//	cout << "iValue" << iValue << endl;
+//	cout << "&iValue" << &iValue << endl;
+//	cout << "rValue" << rValue << endl;
+//	cout << "&rValue" << &rValue << endl;
+
+//	const int val = 7;
+
+//	const int *p = &val;
 
 
-	int val2;
+//	int val2;
 
-	int * const p2 = &val2;
+//	int * const p2 = &val2;
 
-	val2 = 2;
+//	val2 = 2;
 
-	p = &val2;
+//	p = &val2;
 
-	p2 = 0;
+//	p2 = 0;
 
 
 //	printf("sum = %f\n", sum(1.0f, 2.0f));
 
 
-//	cout << "Hello World!" << endl;
 
 //	const char * const p  = "12345";
 //	const char *p2 = "678";
