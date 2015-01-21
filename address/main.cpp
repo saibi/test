@@ -16,86 +16,160 @@ using namespace std;
 //}
 
 
-class cat
+//class cat
+//{
+//public:
+//	cat(int val = 0) : m_value(val)
+//	{
+//		cout << "cat() constructor, m_value = " << m_value << "\n";
+//	}
+
+//	~cat()
+//	{
+//		cout << "~cat()\n";
+//	}
+
+//	cat(const cat & r)
+//	{
+//		m_value = r.m_value;
+//		cout << "cat()copy\n";
+//	}
+
+//	int get() const
+//	{
+//		return m_value;
+//	}
+
+//	void inc()
+//	{
+//		++m_value;
+//	}
+
+//	cat & operator++()
+//	{
+//		++m_value;
+//		return *this;
+//	}
+
+//	cat operator++(int)
+//	{
+//		int prev = m_value;
+//		++m_value;
+//		return prev;
+//	}
+
+//	cat operator+(const cat & rhs) const
+//	{
+//		return (m_value + rhs.m_value);
+//	}
+
+//private:
+//	int m_value;
+//};
+
+//cat operator+(int val, const cat & rhs)
+//{
+//	cat temp(val);
+//	return temp + rhs;
+//}
+
+
+//class CIntArray
+//{
+//public:
+//	CIntArray(int iMaxArray = 10) : m_iMaxArray(iMaxArray)
+//	{
+//		m_pData = new int[m_iMaxArray];
+//	}
+//	~CIntArray()
+//	{
+//		delete [] m_pData;
+//	}
+
+//	CIntArray(const CIntArray & rhs) : m_iMaxArray(rhs.m_iMaxArray)
+//	{
+//		m_pData = new int[m_iMaxArray];
+//		for ( int i = 0 ; i < rhs.m_iMaxArray; ++i)
+//			m_pData[i] = rhs.m_pData[i];
+//	}
+
+
+//	int size() const
+//	{
+//		return m_iMaxArray;
+//	}
+
+//	int & operator[](int i)
+//	{
+//		return m_pData[i];
+//	}
+//	int operator[](int i) const
+//	{
+//		return m_pData[i];
+//	}
+
+//	CIntArray & operator= (const CIntArray & rhs)
+//	{
+//		if ( this == &rhs )
+//			return *this;
+
+//		delete [] m_pData;
+//		m_pData = new int[m_iMaxArray];
+//		for ( int i = 0 ; i < rhs.m_iMaxArray; ++i)
+//			m_pData[i] = rhs.m_pData[i];
+
+//		return *this;
+//	}
+
+//private:
+//	int * m_pData;
+//	int m_iMaxArray;
+//};
+
+
+class CMyString
 {
-public:
-	cat(int val = 0) : m_value(val)
-	{
-		cout << "cat() constructor, m_value = " << m_value << "\n";
-	}
 
-	~cat()
-	{
-		cout << "~cat()\n";
-	}
-
-	cat(const cat & r)
-	{
-		m_value = r.m_value;
-		cout << "cat()copy\n";
-	}
-
-	int get() const
-	{
-		return m_value;
-	}
-
-	void inc()
-	{
-		++m_value;
-	}
-
-	cat & operator++()
-	{
-		++m_value;
-		return *this;
-	}
-
-	cat operator++(int)
-	{
-		int prev = m_value;
-		++m_value;
-		return prev;
-	}
-
-	cat operator+(const cat & rhs) const
-	{
-		return (m_value + rhs.m_value);
-	}
-
-private:
-	int m_value;
 };
-
-cat operator+(int val, const cat & rhs)
-{
-	cat temp(val);
-	return temp + rhs;
-}
 
 int main()
 {
 	cout << "Hello World!" << endl;
 
-	cat c1(10);
-	cat c2;
 
-	cout << c1.get() << endl;
-	c1.inc();
-	cout << c1.get() << endl;
 
-	c2 = c1++;
-	//c1++;
-	cout << c1.get() << endl;
-	cout << c2.get() << endl;
 
-	cat c3 = c1 + c2;
-	cout << c3.get() << endl;
 
-	cat c4 = c1 + 50;
-	cout << c4.get() << endl;
+//	CIntArray iArray;
 
-	c3 = 20 + c1;
+//	for (int i = 0 ; i < iArray.size(); ++i)
+//		iArray[i] = i;
+
+//	CIntArray iArray2(iArray);
+//	for (int i = 0 ; i < iArray2.size(); ++i)
+//		cout << i << " = " << iArray2[i] << endl;
+
+
+
+//	cat c1(10);
+//	cat c2;
+
+//	cout << c1.get() << endl;
+//	c1.inc();
+//	cout << c1.get() << endl;
+
+//	c2 = c1++;
+//	//c1++;
+//	cout << c1.get() << endl;
+//	cout << c2.get() << endl;
+
+//	cat c3 = c1 + c2;
+//	cout << c3.get() << endl;
+
+//	cat c4 = c1 + 50;
+//	cout << c4.get() << endl;
+
+//	c3 = 20 + c1;
 
 //	int iValue = 10;
 //	int & rValue = iValue;
