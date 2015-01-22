@@ -127,18 +127,210 @@ using namespace std;
 //};
 
 
-class CMyString
-{
+#include <string.h>
 
+//class CMyString
+//{
+//public:
+////	CMyString() : m_iLength(0)
+////	{
+////		m_pData = new char [m_iLength+1];
+////		m_pData[0] = 0;
+////	}
+//	CMyString(const char *pData = "" ) : m_iLength(strlen(pData))
+//	{
+//		m_pData = new char [m_iLength+1];
+//		strcpy(m_pData, pData);
+//	}
+
+//	~CMyString()
+//	{
+//		delete [] m_pData;
+//	}
+
+//	CMyString(const CMyString &rhs) : m_iLength(rhs.m_iLength)
+//	{
+//		m_pData = new char [m_iLength+1];
+//		strcpy(m_pData, pData);
+//	}
+
+//	CMyString & operator=(const CMyString & rhs) // const not applicable because this can be changed
+//	{
+//		if ( this == &rhs )
+//			return *this;
+
+//		delete [] m_pData;
+
+//		m_iLength = rhs.m_iLength;
+//		m_pData = new char[m_iLength + 1];
+//		strcpy(m_pData, rhs.m_pData);
+
+//		return *this;
+//	}
+
+//	char & operator[](int iIndex)
+//	{
+//		return m_pData[iIndex];
+//	}
+
+//	char operator[](int iIndex) const
+//	{
+//		return m_pData[iIndex];
+//	}
+
+//	const char * GetData() const
+//	{
+//		return m_pData;
+//	}
+
+//	int GetLength() const
+//	{
+//		return m_iLength;
+//	}
+//private:
+//	char *m_pData;
+//	int m_iLength;
+//};
+
+
+//class Animal
+//{
+//public:
+//	virtual void speak()
+//	{
+//		cout << "animal\n";
+//	}
+
+//	virtual ~Animal()
+//	{
+//		cout << "~Animal()\n";
+//	}
+
+//	virtual void speak2()
+//	{
+//		cout << "animal2\n";
+//	}
+
+//};
+
+//class Dog : public Animal
+//{
+//public:
+
+//	virtual ~Dog()
+//	{
+//		cout << "~Dog()\n";
+//	}
+
+//	virtual void speak2()
+//	{
+//		cout << "dog2\n";
+//	}
+
+//	virtual void speak()
+//	{
+//		cout << "dog\n";
+//	}
+
+
+//};
+
+
+class Weapon
+{
+public:
+	virtual void Attack() const
+	{
+	}
+};
+
+class Sword : public Weapon
+{
+public:
+	void Attack() const
+	{
+		cout << "sword" << endl;
+	}
+};
+
+class Gun : public Weapon
+{
+public:
+	void Attack() const
+	{
+		cout << "gun" << endl;
+	}
+};
+
+class Missle : public Weapon
+{
+public:
+	void Attack() const
+	{
+		cout << "missle" << endl;
+	}
+};
+
+class CRobot
+{
+public:
+	CRobot(int iWeapon) : m_iWeapon(iWeapon)
+	{
+
+	}
+
+	CRobot(Weapon *pWeapon) : m_pWeapon(pWeapon)
+	{
+
+	}
+
+	void Attack() const
+	{
+//		switch (m_iWeapon)
+//		{
+//		case 1:
+//			cout << "sword" << endl;
+//			break;
+
+//		case 2:
+//			cout << "gun" << endl;
+//			break;
+
+//		case 3:
+//			cout << "missle" << endl;
+//			break;
+//		}
+		m_pWeapon->Attack();
+	}
+
+	void ChangeWeapon(int iWeapon)
+	{
+		m_iWeapon = iWeapon;
+	}
+
+private:
+	int m_iWeapon;
+
+	Weapon *m_pWeapon;
 };
 
 int main()
 {
 	cout << "Hello World!" << endl;
 
+	CRobot r(1);
+	r.Attack();
+	r.ChangeWeapon(2);
+	r.Attack();
 
 
+//	Animal *p = new Dog();
 
+//	p->speak();
+
+//	p->speak2();
+
+//	delete p;
 
 //	CIntArray iArray;
 
