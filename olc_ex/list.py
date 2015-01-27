@@ -24,7 +24,7 @@ def maxNumberList(numlist):
     ''' '''
 
     if type(numlist) != list :
-        printf("param is not list")
+        print("param is not list")
         return
 
     bigger = numlist[0]
