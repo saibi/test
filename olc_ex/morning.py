@@ -15,3 +15,12 @@ elif hour < 18:
 else:
     print(evening_msg)
 
+hour = 15
+
+if hour < 12:
+    print(morning_msg)
+    print(have_coffee)
+elif hour < 18:
+    print(goodday_msg)
+else:
+    print(evening_msg)
