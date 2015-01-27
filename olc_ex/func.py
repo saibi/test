@@ -7,7 +7,17 @@ have_coffee = u'coffee'
 
 hour = 5
 
-def greeting(hour):
+# 한글
+
+def greeting(hour, morning_msg = 'good morning'):
+    '''
+    display greeting msg
+    '''
+# check param
+    if hour < 0 or hour > 24:
+        print(u'Invalid hour value (hour >= 0 && hour <= 24)')
+        return hour
+        
     if hour < 12:
         print(morning_msg)
         print(have_coffee)
@@ -18,9 +28,6 @@ def greeting(hour):
         pass
     else:
         print(evening_msg)
-        
 
-greeting(1)
-greeting(13)
-greeting(24)
-greeting(20)
+    return hour
+
