@@ -13,7 +13,12 @@ def greeting(hour, morning_msg = 'good morning'):
     '''
     display greeting msg
     '''
-# check param
+    # check param
+
+    if  type(hour) != int:
+        print('hour shoud be integer')
+        return
+    
     if hour < 0 or hour > 24:
         print(u'Invalid hour value (hour >= 0 && hour <= 24)')
         return hour
