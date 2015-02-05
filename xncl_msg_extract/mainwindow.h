@@ -16,18 +16,10 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+
 private:
-	void addFileList(void);
-	void saveMessageTable(QStringList &message_list, QString file_name);
-
-	void subExtract(int type);
-	enum ExtractType
-	{
-		TYPE_SECTION,
-		TYPE_FILENAME,
-	};
-
 	void updateContextBtn();
+
 
 private slots:
 	void on_btn_file_open_clicked();
@@ -49,7 +41,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
 
-	QStringList		m_file_list;
+	QStringList	m_file_list;
 	QString m_context;
 };
 

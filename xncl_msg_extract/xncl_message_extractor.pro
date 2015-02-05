@@ -13,9 +13,14 @@ DESTDIR = $$PWD/bin/
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    xnclmessageextractor.cpp
+    xnclmessageextractor.cpp \
+    cmdproc.cpp \
+    extractor.cpp
 
 HEADERS  += mainwindow.h \
-    xnclmessageextractor.h
+    xnclmessageextractor.h \
+    cmdproc.h \
+    version.h \
+    extractor.h
 
 FORMS    += mainwindow.ui
