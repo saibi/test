@@ -1,0 +1,244 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/Makefile/Make.sublime-build",
+	"command_palette":
+	{
+		"height": 222.0,
+		"selected_items":
+		[
+			[
+				"pa remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"pa list",
+				"Package Control: List Packages"
+			],
+			[
+				"package con",
+				"Package Control: Remove Package"
+			],
+			[
+				"pa install",
+				"Package Control: Install Package"
+			],
+			[
+				"pack install",
+				"Package Control: Install Package"
+			],
+			[
+				"packagecontrol:insta",
+				"Package Control: Install Package"
+			],
+			[
+				"cscope",
+				"Cscope: Look up functions calling this function"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"close",
+				"File: Close All"
+			],
+			[
+				"rebuild",
+				"CTags: Rebuild Tags"
+			],
+			[
+				"ctags",
+				"CTags: Rebuild Tags"
+			],
+			[
+				"ctag",
+				"CTags: Show Symbols (all)"
+			],
+			[
+				"clean",
+				"Build: Clean"
+			],
+			[
+				"fold",
+				"Project: Add Folder"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/saibi/test/www/js/number/demo6.js",
+		"/home/saibi/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/saibi/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/saibi/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/saibi/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+		"/home/saibi/test/www/js/number/demo4.html",
+		"/home/saibi/test/www/js/number/demo5.html",
+		"/home/saibi/test/www/js/number/demo1.html",
+		"/home/saibi/test/www/js/helloworld.html",
+		"/home/saibi/test/www/js/number/demo3.html",
+		"/home/saibi/test/www/js/number/demo2.html",
+		"/home/saibi/work_space/autocrat/shared/src/edger_shared/edger_sensor.h",
+		"/home/saibi/work_space/autocrat/shared/src/edger_shared/edger_sensor.c",
+		"/home/saibi/work_space/autocrat/inc_ssl/ssl_alloc.h",
+		"/home/saibi/work_space/autocrat/shared/src/edger_shared/feeling_cal_acc.c",
+		"/home/saibi/work_space/autocrat/edger/grooving.c",
+		"/home/saibi/work_space/autocrat/shared/get_hg_rev.sh",
+		"/home/saibi/work_space/autocrat/shared/src/keypad_shared/get_keypad.c",
+		"/home/saibi/work_space/autocrat/Debug/shared/src/keypad_shared/get_keypad.o.lst",
+		"/home/saibi/work_space/autocrat/shared/src/edger_shared/autofree_alloc.c",
+		"/home/saibi/work_space/autocrat/Debug/shared/src/edger_shared/autofree_alloc.d",
+		"/home/saibi/work_space/autocrat/edger/sensor_str.c",
+		"/home/saibi/work_space/autocrat/Main.c",
+		"/home/saibi/work_space/autocrat/shared/src/keypad_shared/stop_key.c",
+		"/home/saibi/work_space/autocrat/Dave/Generated/inc/IO003/IO003.h",
+		"/home/saibi/work_space/autocrat/edger/sensor_str.h",
+		"/home/saibi/work_space/autocrat/shared/src/comm_shared/init_comm.c",
+		"/home/saibi/work_space/autocrat/shared/src/cmd_shared/dev_cmd_list.c",
+		"/home/saibi/work_space/autocrat/shared/src/data_shared/register_symbol.c",
+		"/home/saibi/work_space/autocrat/shared/src/cmd_shared/setup_lib.c",
+		"/home/saibi/.config/sublime-text-3/Packages/User/CTags.sublime-settings",
+		"/home/saibi/.config/sublime-text-3/Packages/CTags/CTags.sublime-settings",
+		"/home/saibi/work_space/autocrat/inc_ssl/ssl_etc.h",
+		"/home/saibi/work_space/autocrat/Debug/sources.mk"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"var",
+			"SSL_FREE",
+			"get_all_edger_sensor_value_str",
+			"isr_stop_key_handler",
+			"add_cmd_list_table"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 261.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"demo4",
+				"number/demo4.html"
+			],
+			[
+				"sensor",
+				"edger/sensor_str.h"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}
