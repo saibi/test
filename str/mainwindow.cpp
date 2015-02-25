@@ -8,6 +8,14 @@ MainWindow::MainWindow(QWidget *parent) :
 	ui(new Ui::MainWindow)
 {
 	ui->setupUi(this);
+
+	QString org = "section@key";
+
+	QString ptn = "section@";
+
+	QString key = org.section(ptn, 1,1);
+
+	qDebug("DBG key = [%s]", qPrintable(key));
 }
 
 MainWindow::~MainWindow()
