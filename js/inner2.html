@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+function outter()
+{
+	var title = 'hello world';
+
+	return function() { alert(title); }
+}
+
+inner = outter();
+
+inner();
+
+</script>
+</body>
+</html>
