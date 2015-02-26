@@ -3,10 +3,30 @@
 	{
 		"selected_items":
 		[
+			[
+				"get",
+				"get_title"
+			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "callback.html",
+			"settings":
+			{
+				"buffer_size": 297,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "arg.html",
+			"settings":
+			{
+				"buffer_size": 349,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Packages/Makefile/Make.sublime-build",
 	"command_palette":
@@ -14,6 +34,10 @@
 		"height": 222.0,
 		"selected_items":
 		[
+			[
+				":w",
+				":w - Save"
+			],
 			[
 				"pa remove",
 				"Package Control: Remove Package"
@@ -88,8 +112,30 @@
 	},
 	"file_history":
 	[
-		"/home/saibi/test/www/js/number/demo6.js",
+		"/home/saibi/test/www/js/callback2.html",
+		"/home/saibi/test/www/js/callback3.html",
+		"/home/saibi/test/www/js/inner.html",
+		"/home/saibi/test/www/js/inner2.html",
+		"/home/saibi/test/www/js/closure.html",
+		"/home/saibi/test/www/js/closure2.html",
+		"/home/saibi/test/www/js/scope5.html",
+		"/home/saibi/test/www/js/scope4.html",
+		"/home/saibi/test/www/js/scope2.html",
+		"/home/saibi/test/www/js/scope.html",
+		"/home/saibi/test/www/js/scope3.html",
+		"/home/saibi/test/www/js/greeting.js",
+		"/home/saibi/test/www/js/lib1.html",
+		"/home/saibi/test/www/js/jquery-1.11.2.js",
+		"/home/saibi/test/www/js/module1.html",
+		"/home/saibi/test/www/js/object1.html",
+		"/home/saibi/test/www/js/object2.html",
+		"/home/saibi/test/www/js/array/array1.html",
 		"/home/saibi/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/saibi/test/www/js/func/func2.html",
+		"/home/saibi/test/www/js/func/func3.html",
+		"/home/saibi/test/www/js/func/func4.html",
+		"/home/saibi/test/www/js/func/func1.html",
+		"/home/saibi/test/www/js/number/demo6.js",
 		"/home/saibi/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
 		"/home/saibi/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
 		"/home/saibi/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
@@ -162,8 +208,62 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "callback.html",
+					"settings":
+					{
+						"buffer_size": 297,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								297,
+								297
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "arg.html",
+					"settings":
+					{
+						"buffer_size": 349,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								323,
+								323
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
