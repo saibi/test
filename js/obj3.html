@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<ul>
+<script type="text/javascript">
+function Person(name){
+    this.name = name;
+    this.introduce = function(){
+        return 'My name is '+this.name; 
+    }   
+}
+var p1 = new Person('saibi');
+document.write(p1.introduce()+"<br />");
+ 
+var p2 = new Person('lee');
+document.write(p2.introduce());
+</script>
+</ul>
+</body>
+</html>
