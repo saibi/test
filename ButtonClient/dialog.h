@@ -25,14 +25,30 @@ private slots:
 
 	void slotConnected();
 
-	void on_pushButton_enable_clicked();
+	void on_pushButton_btn1_clicked();
 
-	void on_pushButton_disable_clicked();
+	void on_pushButton_btn2_clicked();
+
+	void on_pushButton_show_clicked();
+
+	void on_pushButton_hide_clicked();
+
+	void on_pushButton_up_clicked();
+
+	void on_pushButton_down_clicked();
+
+	void on_pushButton_right_clicked();
+
+	void on_pushButton_left_clicked();
 
 private:
 	Ui::Dialog *ui;
 
 	QLocalSocket *socket;
+
+	QString m_cmdStr;
+
+	void sendCommand(const QString & cmdStr);
 };
 
 #endif // DIALOG_H

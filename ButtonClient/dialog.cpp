@@ -46,7 +46,7 @@ void Dialog::displayError(QLocalSocket::LocalSocketError socketError)
 	case QLocalSocket::ConnectionRefusedError:
 		QMessageBox::information(this, tr("Button Client"),
 								 tr("The connection was refused by the peer. "
-									"Make sure the fortune server is running, "
+									"Make sure the button server is running, "
 									"and check that the host name and port "
 									"settings are correct."));
 		break;
@@ -67,10 +67,8 @@ void Dialog::on_pushButton_send_clicked()
 {
 	qDebug("Dialog::on_pushButton_send_clicked()");
 
+	sendCommand(ui->lineEdit_cmd->text());
 	ui->pushButton_send->setEnabled(false);
-
-	socket->abort();
-	socket->connectToServer("ButtonServer");
 
 	qDebug("Dialog::on_pushButton_send_clicked() end");
 
@@ -85,7 +83,7 @@ void Dialog::slotConnected()
 	QDataStream out(&block, QIODevice::WriteOnly);
 
 	out.setVersion(QDataStream::Qt_4_7);
-	out << ui->lineEdit_cmd->text();
+	out << m_cmdStr;
 
 	socket->write(block);
 	socket->flush();
@@ -94,12 +92,57 @@ void Dialog::slotConnected()
 	qDebug("Dialog::slotConnected() end");
 }
 
-void Dialog::on_pushButton_enable_clicked()
+void Dialog::sendCommand(const QString &cmdStr)
 {
-	ui->pushButton_send->setEnabled(true);
+	m_cmdStr = cmdStr;
+	socket->abort();
+	socket->connectToServer("ButtonServer");
 }
 
-void Dialog::on_pushButton_disable_clicked()
+void Dialog::on_pushButton_btn1_clicked()
 {
-	ui->pushButton_send->setEnabled(false);
+	qDebug("Dialog::on_pushButton_btn1_clicked()");
+	sendCommand("id 0");
+}
+
+void Dialog::on_pushButton_btn2_clicked()
+{
+	qDebug("Dialog::on_pushButton_btn2_clicked()");
+	sendCommand("id 1");
+}
+
+void Dialog::on_pushButton_show_clicked()
+{
+	qDebug("Dialog::on_pushButton_show_clicked()");
+	sendCommand("show");
+}
+
+void Dialog::on_pushButton_hide_clicked()
+{
+	qDebug("Dialog::on_pushButton_hide_clicked()");
+	sendCommand("hide");
+}
+
+void Dialog::on_pushButton_up_clicked()
+{
+	qDebug("Dialog::on_pushButton_up_clicked()");
+	sendCommand("move up");
+}
+
+void Dialog::on_pushButton_down_clicked()
+{
+	qDebug("Dialog::on_pushButton_down_clicked()");
+	sendCommand("move down");
+}
+
+void Dialog::on_pushButton_right_clicked()
+{
+	qDebug("Dialog::on_pushButton_right_clicked()");
+	sendCommand("move right");
+}
+
+void Dialog::on_pushButton_left_clicked()
+{
+	qDebug("Dialog::on_pushButton_left_clicked()");
+	sendCommand("move left");
 }
