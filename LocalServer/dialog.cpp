@@ -16,7 +16,7 @@ Dialog::Dialog(QWidget *parent) :
 	m_server = new QLocalServer(this);
 
 
-	if ( !m_server->listen("LocalServer") )
+	if ( !m_server->listen("TouchButtonServer") )
 	{
 		QMessageBox::critical(this, tr("LocalServer"), tr("Unable to start the server: %1").arg(m_server->errorString()));
 		delete m_server;

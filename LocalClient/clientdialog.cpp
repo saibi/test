@@ -20,7 +20,7 @@ ClientDialog::ClientDialog(QWidget *parent) :
 	connect(m_socket, SIGNAL(error(QLocalSocket::LocalSocketError)), this, SLOT(displayError(QLocalSocket::LocalSocketError)));
 	connect(m_socket, SIGNAL(connected()), this, SLOT(slotConnected()));
 
-	m_socket->connectToServer("LocalServer", QIODevice::WriteOnly);
+	m_socket->connectToServer("TouchButtonServer", QIODevice::WriteOnly);
 
 
 }
