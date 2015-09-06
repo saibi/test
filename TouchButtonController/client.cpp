@@ -10,7 +10,7 @@ Client::Client(QWidget *parent) :
 {
 	ui->setupUi(this);
 
-	Controller::instance().launchServer("/tmp/TouchButtonServer");
+	//Controller::instance().launchServer("/tmp/TouchButtonServer");
 
 	QTimer::singleShot(1000, this, SLOT(slotConnect()));
 }
