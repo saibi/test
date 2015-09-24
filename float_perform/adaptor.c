@@ -42,7 +42,7 @@ static void gen_lens_adaptor_data(float width, float height, float *r, float *a,
 	}
 }
 
-#define LOOP_COUNT 2000
+#define LOOP_COUNT 5000
 #define MAX_RECORD_COUNT 1440 
 
 int main(void)

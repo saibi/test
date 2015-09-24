@@ -23,23 +23,23 @@ COPTS=
 ifdef T 
 	ifeq ("$(T)","ns")
 		path=/opt/arm-2009q3/bin/arm-linux-
-		COPTS=
+		COPTS=-mfloat-abi=soft
 	endif
 	ifeq ("$(T)","nsf")
 		path=/opt/arm-2009q3/bin/arm-linux-
-		COPTS="-mfloat-abi=softfp"
+		COPTS=-mfloat-abi=softfp
 	endif
 	ifeq ("$(T)","nsfn")
 		path=/opt/arm-2009q3/bin/arm-linux-
-		COPTS="-march=armv7-a -mfpu=neon -mfloat-abi=softfp"
+		COPTS=-march=armv7-a -mfpu=neon -mfloat-abi=softfp
 	endif
 	ifeq ("$(T)","nhf")
 		path=/opt/gcc-linaro-arm-linux-gnueabihf-4.8-2014.04_linux/bin/arm-linux-gnueabihf-
-		COPTS="-marm -mthumb-interwork -mfloat-abi=hard -march=armv7-a -mfpu=neon-vfpvr"
+		COPTS=-mfloat-abi=hard -march=armv7-a -mfpu=neon
 	endif
 	ifeq ("$(T)","ahf")
 		path=/opt/gcc-linaro-arm-linux-gnueabihf-4.8-2014.04_linux/bin/arm-linux-gnueabihf-
-		COPTS="-marm -mthumb-interwork -mfloat-abi=hard -mcpu=cortex-a7 -mtune=cortex-a7 -mfpu=neon-vfpvr"
+		COPTS=-marm -mthumb-interwork -mfloat-abi=hard -mcpu=cortex-a7 -mtune=cortex-a7 -mfpu=neon-vfpv4
 	endif
 else
 T=gcc
