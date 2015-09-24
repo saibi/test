@@ -9,7 +9,7 @@
 /// \param r (out)
 /// \param a (out)
 /// \param count
-void gen_lens_adaptor_data(float width, float height, float *r, float *a, int count)
+static void gen_lens_adaptor_data(float width, float height, float *r, float *a, int count)
 {
 	float target_theta, inflection_theta, theta_add;
 	float pi_m_inflection_theta, pi_p_inflection_theta, twopi_m_inflection_theta;
@@ -42,46 +42,19 @@ void gen_lens_adaptor_data(float width, float height, float *r, float *a, int co
 	}
 }
 
-double calc(double a, double b)
-{
-	return a * b * 100.0 / 13.4;
-}
-
-double sum(int cnt)
-{
-	int i;
-	double ret, sum = 0.0;
-
-	for ( i = 0 ; i < cnt; ++i)
-	{
-		ret = sqrt(pow(calc(i, i * 17.1818), 3));
-		sum += ret;
-	}
-
-	return sum;
-}
-
-
-
-#define MAX 5000
+#define LOOP_COUNT 2000
+#define MAX_RECORD_COUNT 1440 
 
 int main(void)
 {
 
 	int i;
 
-	float r_list[MAX];
-	float a_list[MAX];
+	float r_list[MAX_RECORD_COUNT];
+	float a_list[MAX_RECORD_COUNT];
 
-	printf("float test\n");
-
-	for ( i = 0 ; i < MAX; ++i)
-		gen_lens_adaptor_data( 13.13 + i/511.18, 17.1818 + i/1818.18, r_list, a_list, MAX);
-
-	for ( i = 0 ; i < MAX; ++i)
-	{
-		//printf("%d %f %f\n", i, r_list[i], a_list[i]);
-	}
+	for ( i = 0 ; i < LOOP_COUNT; ++i)
+		gen_lens_adaptor_data( 23.1818181818 + i/511.18, 17.1818 + i/1818.18, r_list, a_list, MAX_RECORD_COUNT);
 
 	return 0;
 }
