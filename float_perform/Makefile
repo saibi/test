@@ -45,6 +45,11 @@ else
 T=gcc
 endif
 
+ifdef O  
+COPTS+=-O$(O)
+POSTFIX=_o$(O)
+endif
+
 TEST_PRJ="libssl$(core_type_str)$(endian_str)d_$(compiler_str).a"
 RELEASE_PRJ="libssl$(core_type_str)$(endian_str)_$(compiler_str).a"
 PRJ=$(TEST_PRJ)
@@ -79,7 +84,6 @@ ALL_SRCS=$(SRCS)
 ALL_OBJS=$(OBJS) 
 
 
-
 all: pretask build_all posttask 
 
 help:
@@ -98,11 +102,13 @@ pretask:
 	@echo Build $(T)
 
 posttask:
-	@echo 
+	@echo end...
 
 build_all: 
 	$(CC) $(CFLAGS) adaptor.c -lm -static
-	$(Q)mv a.out $(T)_test
+	$(Q)mv a.out float_$(T)_test$(POSTFIX)
+	$(CC) $(CFLAGS) int.c -static
+	$(Q)mv a.out int_$(T)_test$(POSTFIX)
 
 
 .s.o:
@@ -115,5 +121,5 @@ build_all:
 	$(Q)$(CC) $(CFLAGS) $< -o $@
 
 clean:
-	$(Q)$(RM) *.o *_test
+	$(Q)$(RM) *.o *test*
 

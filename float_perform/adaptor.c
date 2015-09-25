@@ -53,9 +53,16 @@ int main(void)
 	float r_list[MAX_RECORD_COUNT];
 	float a_list[MAX_RECORD_COUNT];
 
+	float sum = 0.0;
+
 	for ( i = 0 ; i < LOOP_COUNT; ++i)
 		gen_lens_adaptor_data( 23.1818181818 + i/511.18, 17.1818 + i/1818.18, r_list, a_list, MAX_RECORD_COUNT);
 
+
+	for ( i = 0 ; i < MAX_RECORD_COUNT; ++i )
+		sum += r_list[i] + a_list[i];
+
+	printf("%.4f\n", sum);
 	return 0;
 }
 
