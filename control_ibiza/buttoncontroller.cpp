@@ -116,10 +116,7 @@ void ButtonController::sendCommand(const QString &cmd)
 
 		m_socket->write(block);
 		m_socket->flush();
-		if ( m_socket->waitForBytesWritten(1*1000) )
-			qDebug("[ButtonController::sendCommand] send [%s]", qPrintable(cmd));
-		else
-			qDebug("[ButtonController::sendCommand] send [%s] false", qPrintable(cmd));
+		qDebug("[ButtonController::sendCommand] send [%s]", qPrintable(cmd));
 	}
 }
 
