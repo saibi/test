@@ -18,7 +18,7 @@ public:
 		return control;
 	}
 
-	void connectToServer(const QString & name = "");
+	bool connectToServer(const QString & name = "");
 	void disconnectFromServer();
 	void sendCommand(const QString & cmd);
 	bool launchServer(const QString & serverPath);
@@ -26,10 +26,12 @@ public:
 	//bool terminateServer();
 
 signals:
+	void signalDisconnected();
 
 private slots:
 	void slotSocketError(QLocalSocket::LocalSocketError socketError);
 	void slotConnected();
+	void slotDisconnected();
 
 private:
 	QLocalSocket * m_socket;

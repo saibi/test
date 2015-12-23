@@ -20,6 +20,8 @@ private slots:
 
 	void on_lineEdit_command_returnPressed();
 
+	void slotDisconnected();
+
 private:
 	Ui::MainWindow *ui;
 };

@@ -12,6 +12,9 @@ MainWindow::MainWindow(QWidget *parent) :
 	ui->setupUi(this);
 
 	ui->groupBox->setEnabled(false);
+
+	connect(&ButtonController::instance(), SIGNAL(signalDisconnected()), this, SLOT(slotDisconnected()));
+
 }
 
 MainWindow::~MainWindow()
@@ -35,21 +38,11 @@ void MainWindow::on_pushButton_connect_clicked()
 			return;
 		}
 
-		ButtonController::instance().connectToServer(ui->lineEdit_socketName->text().trimmed());
-
-		// wait till connected
-		QTime t;
-
-		t.start();
-
-		while( t.elapsed() < 1 * 1000 )
+		if ( ButtonController::instance().connectToServer(ui->lineEdit_socketName->text().trimmed()) )
 		{
-			if ( ButtonController::instance().isConnected() )
-			{
-				qDebug("[MainWindow::on_pushButton_connect_clicked] connected");
-				ui->groupBox->setEnabled(true);
-				return;
-			}
+			qDebug("[MainWindow::on_pushButton_connect_clicked] connected");
+			ui->groupBox->setEnabled(true);
+			return;
 		}
 		ui->pushButton_connect->setChecked(false);
 		qDebug("[MainWindow::on_pushButton_connect_clicked] connection error");
@@ -59,6 +52,14 @@ void MainWindow::on_pushButton_connect_clicked()
 		ButtonController::instance().disconnectFromServer();
 		ui->groupBox->setEnabled(false);
 	}
+}
+
+void MainWindow::slotDisconnected()
+{
+	qDebug("[MainWindow::slotDisconnected]");
+
+	ui->groupBox->setEnabled(false);
+	ui->pushButton_connect->setChecked(false);
 }
 
 void MainWindow::on_lineEdit_command_returnPressed()

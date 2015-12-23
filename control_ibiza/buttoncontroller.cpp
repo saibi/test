@@ -61,20 +61,33 @@ void ButtonController::slotConnected()
 	qDebug("[ButtonController::slotConnected]");
 	m_connected = true;
 	m_error = 0;
+
+	connect(m_socket, SIGNAL(disconnected()), this, SLOT(slotDisconnected()));
 }
 
-void ButtonController::connectToServer(const QString &name)
+void ButtonController::slotDisconnected()
+{
+	qDebug("[ButtonController::slotDisconnected]");
+	m_connected = false;
+
+	emit signalDisconnected();
+}
+
+bool ButtonController::connectToServer(const QString &name)
 {
 	if ( !m_socket )
 	{
 		qDebug("[ButtonController::connect] socket is not allocated.");
-		return;
+		return false;
 	}
 
 	disconnectFromServer();
 
 	QMutexLocker locker(&g_mutex);
 	m_socket->connectToServer( name.isEmpty() ? DEFAULT_NAME : name, QIODevice::WriteOnly);
+	if ( m_socket->waitForConnected(1 * 1000))
+		return true;
+	return false;
 }
 
 void ButtonController::disconnectFromServer()
@@ -85,7 +98,7 @@ void ButtonController::disconnectFromServer()
 		QMutexLocker locker(&g_mutex);
 
 		m_socket->abort();
-		m_connected = false;
+		//m_connected = false;
 	}
 }
 
@@ -103,7 +116,10 @@ void ButtonController::sendCommand(const QString &cmd)
 
 		m_socket->write(block);
 		m_socket->flush();
-		qDebug("[ButtonController::sendCommand] send [%s]", qPrintable(cmd));
+		if ( m_socket->waitForBytesWritten(1*1000) )
+			qDebug("[ButtonController::sendCommand] send [%s]", qPrintable(cmd));
+		else
+			qDebug("[ButtonController::sendCommand] send [%s] false", qPrintable(cmd));
 	}
 }
 
