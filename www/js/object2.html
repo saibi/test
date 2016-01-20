@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var grades = 
+{
+	'list' :  { 'saibi' : 10, 'lee' : 5, 'park' : 9 },
+	'show' : function() 
+	{
+		alert('Hello world');
+	},
+	'show2' : function() 
+	{
+		console.log(this.list);
+	},
+
+	'show3' : function()
+	{
+		for (var name in this.list)
+		{
+			console.log(name, this.list[name]);
+		}
+	}
+}
+
+//grades['show']();
+grades.show2();
+grades.show3();
+
+//alert(grades['list']['saibi']);
+
+
+</script>
+
+</body>
+</html>

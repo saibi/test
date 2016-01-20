@@ -1,0 +1,379 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get",
+				"get_title"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "callback.html",
+			"settings":
+			{
+				"buffer_size": 297,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "arg.html",
+			"settings":
+			{
+				"buffer_size": 349,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Starting /home/saibi/work_space/nex_gui/new/nex_edger/bin/nex_edger...\n\nstart hpe8000 gui\nSTART HPE-8000 GUI\n[Logger::setDirectory] Dir: [/home/saibi/work_space/nex_gui/new/nex_edger/bin/]\n[Logger::setDirectory] exists: [/home/saibi/work_space/nex_gui/new/nex_edger/bin/]\n[Logger::setFileName] FileName: [nex_edger.log]\n2015-03-06T11:55:04 \n\n\n\n\n===NEX==========================================================================\n2015-03-06T11:55:04 [ConfigManager::setDataFilePath] DataFilePath: [/home/saibi/work_space/nex_gui/new/nex_edger/bin/nex_edger.cfg]\n2015-03-06T11:55:04 [ConfigManager::setDataFilePath] Final - DataFilePath: [/home/saibi/work_space/nex_gui/new/nex_edger/bin/nex_edger.cfg]\n2015-03-06T11:55:04 [ConfigManager::setDataFilePath] Done.\n2015-03-06T11:55:04 [ConfigManager::refreshCacheMap] Start.\n2015-03-06T11:55:04 [ConfigManager::refreshCacheMap] Done. - Count: [660]\n2015-03-06T11:55:04 [/home/saibi/work_space/nex_gui/new/nex_edger/bin/nex_edger] Start.\n2015-03-06T11:55:04 LCD PIXEL_PITCH = 0.26920\n2015-03-06T11:55:05 [AbstractDlg_Start::initialize] Start\n2015-03-06T11:55:05 [virtual void Dlg_Start_80::upgradeConfigData()] DB Version 25 \n2015-03-06T11:55:05 [ConfigManager::setDataList] Done. 1 items\n2015-03-06T11:55:05 [ConfigManager::delData] Section: [MOTOR_BEVEL_GRV_ADJ], ID count [7]\n2015-03-06T11:55:05 [ConfigManager::delData] Section: [MOTOR_USER_BEVEL_GRV_ADJ], ID count [7]\n2015-03-06T11:55:05 [ConfigManager::delSection] Section: [DRILL_ADJUSTMENT]\n2015-03-06T11:55:05 [ConfigManager::delSection] Section: [DRILL_CALIBRATION]\n2015-03-06T11:55:05 [ConfigManager::delSection] Section: [DRILL_CONTROL]\n2015-03-06T11:55:05 [ConfigManager::delSection] Section: [DRILL_STAT]\n2015-03-06T11:55:05 [SdJobManager::setAppendingFlag] flag: false\n2015-03-06T11:55:05 [SdJobManager::startJobManager] Start.\n2015-03-06T11:55:05 [SdObserver::startObserver] Start.\n2015-03-06T11:55:05 [SdObserver::startObserver] Done.\n2015-03-06T11:55:05 [SdJobManager::startJobManager] Done.\n2015-03-06T11:55:05 [SdObserver::run] Start.\n2015-03-06T11:55:05 [Dlg_Main::updateUi_jobNumber] JOB: []\n2015-03-06T11:55:05 [SdJobManager::run] Start.\n2015-03-06T11:55:05 [SdJobManager::new_refreshSdJobDataBackground] Start.\n2015-03-06T11:55:05 [SdJobManager::new_refreshSdJobDataBackground] job number map added\n2015-03-06T11:55:05 [SdJobManager::new_refreshSdJobDataBackground] time map added\n2015-03-06T11:55:05 [SdJobManager::new_refreshSdJobDataBackground] Done.\n2015-03-06T11:55:05 [Dlg_EdgerMain_80::initDialogs]\n2015-03-06T11:55:05 [XnclWidget::loadXML] Version: [1.0], Section: [UI_GENERAL], Mode: [ff]\n2015-03-06T11:55:05 [XnclWidget::loadXML] OK\n2015-03-06T11:55:05 [XnclWidget::loadXML] Version: [1.0], Section: [UI_LAYOUT], Mode: [ff]\n2015-03-06T11:55:05 [XnclWidget::loadXML] OK\n2015-03-06T11:55:05 [XnclWidget::loadXML] Version: [1.0], Section: [UI_EDGING], Mode: [ff]\n2015-03-06T11:55:05 [XnclWidget::loadXML] OK\n2015-03-06T11:55:05 [XnclWidget::loadXML] Version: [1.0], Section: [UI_DP], Mode: [ff]\n2015-03-06T11:55:05 [XnclWidget::loadXML] OK\n2015-03-06T11:55:05 [XnclWidget::loadXML] Version: [1.0], Section: [UI_HE], Mode: [ff]\n2015-03-06T11:55:05 [XnclWidget::loadXML] OK\n2015-03-06T11:55:05 [XnclWidget::loadXML] Version: [1.0], Section: [UI_HE], Mode: [ff]\n2015-03-06T11:55:05 [XnclWidget::loadXML] OK\n2015-03-06T11:55:05 [XnclWidget::loadXML] Version: [1.0], Section: [UI_FRAME_FITTING], Mode: [ff]\n2015-03-06T11:55:05 [XnclWidget::loadXML] OK\n2015-03-06T11:55:05 [XnclWidget::loadXML] Version: [1.0], Section: [UI_FRAME_FITTING2], Mode: [ff]\n2015-03-06T11:55:05 [XnclWidget::loadXML] OK\n2015-03-06T11:55:05 [XnclWidget::loadXML] Version: [1.0], Section: [UI_PORT], Mode: [ff]\n2015-03-06T11:55:05 [XnclWidget::loadXML] OK\n2015-03-06T11:55:05 [ConfigManager::getDataList] Section: [UI_GENERAL]\n2015-03-06T11:55:05 [ConfigManager::getDataList] Section: [UI_GENERAL]\n2015-03-06T11:55:05 [ConfigManager::getDataList] Section: [UI_GENERAL]\n2015-03-06T11:55:05 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:05 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:05 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:05 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:05 [Dlg_SettingPreferences::on_tabWidget_currentChanged] Index: [0]\n2015-03-06T11:55:05 [ConfigManager::getDataList] Section: [UI_GENERAL]\n2015-03-06T11:55:05 [ConfigManager::getDataList] Section: [UI_LAYOUT]\n2015-03-06T11:55:05 [ConfigManager::getDataList] Section: [UI_EDGING]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [UI_DP]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [UI_HE]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [UI_HE]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [UI_FRAME_FITTING]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [UI_FRAME_FITTING2]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [UI_PORT]\n2015-03-06T11:55:06 [Dlg_SettingPreferences::changeFrameFittingMode] Both Flag: [1]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [UI_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [UI_LAYOUT]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [UI_EDGING]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [UI_DP]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [UI_HE]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [UI_HE]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [UI_FRAME_FITTING]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [UI_FRAME_FITTING2]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [UI_PORT]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [void Dlg_SettingPreferences::dumpData()] dump Preferences --------------------\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [UI_GENERAL]\n2015-03-06T11:55:06 U_auto_backup=0\n2015-03-06T11:55:06 U_beep_sound=1\n2015-03-06T11:55:06 U_cfg_dev_edit_blocker_job=0\n2015-03-06T11:55:06 U_cfg_dev_flag=0\n2015-03-06T11:55:06 U_cfg_dev_hawaii=1\n2015-03-06T11:55:06 U_cfg_dev_hi_polish=1\n2015-03-06T11:55:06 U_cfg_dev_milling=1\n2015-03-06T11:55:06 U_cfg_dev_pctri_far=0\n2015-03-06T11:55:06 U_cfg_dev_pgrv=1\n2015-03-06T11:55:06 U_cfg_dev_pgrv_flat_bev=1\n2015-03-06T11:55:06 U_cfg_dev_save_test_job=0\n2015-03-06T11:55:06 U_cfg_dev_special_bevel_sb=0\n2015-03-06T11:55:06 U_cfg_white=0\n2015-03-06T11:55:06 U_conf_history_backup_date=\n2015-03-06T11:55:06 U_conf_history_backup_name=\n2015-03-06T11:55:06 U_conf_history_factory_reset_date=\n2015-03-06T11:55:06 U_conf_history_factory_save_date=\n2015-03-06T11:55:06 U_conf_history_restore_date=\n2015-03-06T11:55:06 U_conf_history_restore_name=\n2015-03-06T11:55:06 U_conf_history_system_backup_date=\n2015-03-06T11:55:06 U_conf_history_system_restore_date=\n2015-03-06T11:55:06 U_config_version=25\n2015-03-06T11:55:06 U_def_rl_mirroring=0\n2015-03-06T11:55:06 U_digital_designer_mode=0\n2015-03-06T11:55:06 U_dot_click_mode=0\n2015-03-06T11:55:06 U_dot_pitch=0.2692\n2015-03-06T11:55:06 U_drill_heartbeat_timeout=10\n2015-03-06T11:55:06 U_eccentricity_check=0\n2015-03-06T11:55:06 U_eccentricity_distance=15.0\n2015-03-06T11:55:06 U_edit_processed_job=0\n2015-03-06T11:55:06 U_frame_fitting_sep=0\n2015-03-06T11:55:06 U_grid_space_h=5\n2015-03-06T11:55:06 U_grid_space_v=5\n2015-03-06T11:55:06 U_language=0\n2015-03-06T11:55:06 U_lcd_type=1\n2015-03-06T11:55:06 U_lens_adaptor_h=17\n2015-03-06T11:55:06 U_lens_adaptor_w=24\n2015-03-06T11:55:06 U_manufacture_id=\n2015-03-06T11:55:06 U_max_wheel_abev=8000\n2015-03-06T11:55:06 U_max_wheel_fin=8000\n2015-03-06T11:55:06 U_max_wheel_grv=1000\n2015-03-06T11:55:06 U_max_wheel_mill=10000\n2015-03-06T11:55:06 U_max_wheel_pol=8000\n2015-03-06T11:55:06 U_max_wheel_rou_gl=5000\n2015-03-06T11:55:06 U_max_wheel_rou_pl=10000\n2015-03-06T11:55:06 U_max_wheel_sbfront=1000\n2015-03-06T11:55:06 U_max_wheel_sbrear=1000\n2015-03-06T11:55:06 U_pixel_pitch=0.2692\n2015-03-06T11:55:06 U_safety_check=1\n2015-03-06T11:55:06 U_saving_DSC_center_mode=1\n2015-03-06T11:55:06 U_sbg_stroke_max=2800\n2015-03-06T11:55:06 U_sbg_stroke_min=2000\n2015-03-06T11:55:06 U_sc_margin_add_bevel_h=0\n2015-03-06T11:55:06 U_sc_margin_add_rear_h=1\n2015-03-06T11:55:06 U_sc_margin_asym=0.5\n2015-03-06T11:55:06 U_show_grid=0\n2015-03-06T11:55:06 U_show_tip_msg=1\n2015-03-06T11:55:06 U_sleep_mode=1\n2015-03-06T11:55:06 U_sleep_mode_wait=30\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [UI_LAYOUT]\n2015-03-06T11:55:06 U_blocking_mode=0\n2015-03-06T11:55:06 U_bridge_check=1\n2015-03-06T11:55:06 U_default_bifocal_dia=18.0\n2015-03-06T11:55:06 U_default_bifocal_offset_h=5.0\n2015-03-06T11:55:06 U_default_bifocal_offset_v=5.0\n2015-03-06T11:55:06 U_default_boxed_height=18.0\n2015-03-06T11:55:06 U_default_bridge_size=15.0\n2015-03-06T11:55:06 U_default_delta_y=2.0\n2015-03-06T11:55:06 U_default_mixed_height=18.0\n2015-03-06T11:55:06 U_default_pd=64.0\n2015-03-06T11:55:06 U_default_side=0\n2015-03-06T11:55:06 U_field_warning=1\n2015-03-06T11:55:06 U_lens_type=0\n2015-03-06T11:55:06 U_oh_check=1\n2015-03-06T11:55:06 U_oh_sync=1\n2015-03-06T11:55:06 U_oh_type=0\n2015-03-06T11:55:06 U_pd_check=1\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [UI_EDGING]\n2015-03-06T11:55:06 U_apply_def_roughing_mode=1\n2015-03-06T11:55:06 U_asymmetric_front_height=0.8\n2015-03-06T11:55:06 U_asymmetric_rear_height=1.5\n2015-03-06T11:55:06 U_bevel_options_default_value_basecurve=4\n2015-03-06T11:55:06 U_bevel_options_default_value_front=1.6\n2015-03-06T11:55:06 U_bevel_options_default_value_percent=50.0\n2015-03-06T11:55:06 U_bevel_options_default_value_rear=1.6\n2015-03-06T11:55:06 U_bevel_options_polishing=0\n2015-03-06T11:55:06 U_bevel_options_position=4\n2015-03-06T11:55:06 U_bevel_options_safety_beveling_front=0\n2015-03-06T11:55:06 U_bevel_options_safety_beveling_rear=0\n2015-03-06T11:55:06 U_def_roughing_mode_pc=1\n2015-03-06T11:55:06 U_def_roughing_mode_pl=0\n2015-03-06T11:55:06 U_edging_flag_far=1\n2015-03-06T11:55:06 U_edging_flag_fob=0\n2015-03-06T11:55:06 U_edging_start_side=0\n2015-03-06T11:55:06 U_edging_type_hp_frame=0\n2015-03-06T11:55:06 U_edging_type_metal_frame=0\n2015-03-06T11:55:06 U_edging_type_pattern=1\n2015-03-06T11:55:06 U_edging_type_sp_frame=0\n2015-03-06T11:55:06 U_enable_glass_flat_edging=0\n2015-03-06T11:55:06 U_enable_sb_for_grv_bev=0\n2015-03-06T11:55:06 U_lens_material=0\n2015-03-06T11:55:06 U_manual_pos_angle_guide=0\n2015-03-06T11:55:06 U_manual_pos_def_region=12\n2015-03-06T11:55:06 U_milling_guide=0\n2015-03-06T11:55:06 U_mini_height=0.5\n2015-03-06T11:55:06 U_mini_size_offset=0.00\n2015-03-06T11:55:06 U_new_manual_ui=1\n2015-03-06T11:55:06 U_rimless_options_default_value_basecurve=4\n2015-03-06T11:55:06 U_rimless_options_default_value_front=1.6\n2015-03-06T11:55:06 U_rimless_options_default_value_groove_depth=0.4\n2015-03-06T11:55:06 U_rimless_options_default_value_groove_width=0.6\n2015-03-06T11:55:06 U_rimless_options_default_value_percent=50.0\n2015-03-06T11:55:06 U_rimless_options_default_value_rear=1.6\n2015-03-06T11:55:06 U_rimless_options_groove_position=0\n2015-03-06T11:55:06 U_rimless_options_polishing=0\n2015-03-06T11:55:06 U_rimless_options_safety_beveling_front=0\n2015-03-06T11:55:06 U_rimless_options_safety_beveling_rear=0\n2015-03-06T11:55:06 U_safety_mode=0\n2015-03-06T11:55:06 U_semi_u_rear_height=0.8\n2015-03-06T11:55:06 U_semi_u_x_offset=0.5\n2015-03-06T11:55:06 U_tilt_mode=0\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [UI_DP]\n2015-03-06T11:55:06 U_digital_pattern_apply_method=0\n2015-03-06T11:55:06 U_dp_zoom=0\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [UI_HE]\n2015-03-06T11:55:06 U_cfg_dev_hole_editor=1\n2015-03-06T11:55:06 U_cfg_dev_hole_retouch=1\n2015-03-06T11:55:06 U_dot_click_bridge_edge_dist=2.70\n2015-03-06T11:55:06 U_dot_click_bridge_height=5.00\n2015-03-06T11:55:06 U_dot_click_bridge_hole_dia=1.40\n2015-03-06T11:55:06 U_dot_click_bridge_hole_sep=3.00\n2015-03-06T11:55:06 U_dot_click_mag_edge_dist=3.25\n2015-03-06T11:55:06 U_dot_click_mag_height=3.00\n2015-03-06T11:55:06 U_dot_click_pri_mag_hole_depth=1.40\n2015-03-06T11:55:06 U_dot_click_pri_round_mag_hole_dia=2.70\n2015-03-06T11:55:06 U_dot_click_reader_round_mag_hole_dia=2.55\n2015-03-06T11:55:06 U_dot_click_reader_size=0.00\n2015-03-06T11:55:06 U_dot_click_sun_expand_size=1.60\n2015-03-06T11:55:06 U_dot_click_sun_mag_hole_offset=-0.45\n2015-03-06T11:55:06 U_dot_click_sun_round_mag_hole_dia=3.08\n2015-03-06T11:55:06 U_he_def_preset_load=1\n2015-03-06T11:55:06 U_he_x_ref=2\n2015-03-06T11:55:06 U_he_y_ref=0\n2015-03-06T11:55:06 U_hole_depth=0.0\n2015-03-06T11:55:06 U_hole_diameter=1.0\n2015-03-06T11:55:06 U_manual_tilting_angle=15.0\n2015-03-06T11:55:06 U_tilting_mode=0\n2015-03-06T11:55:06 U_tilting_ref_surface=0\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [UI_PORT]\n2015-03-06T11:55:06 U_barcode=1\n2015-03-06T11:55:06 U_barcode_baudrate=9600\n2015-03-06T11:55:06 U_blocker=1\n2015-03-06T11:55:06 U_blocker_baudrate=115200\n2015-03-06T11:55:06 U_blocker_protocol=0\n2015-03-06T11:55:06 U_dcs_confirm_timeout=6\n2015-03-06T11:55:06 U_dcs_packet_timeout=12\n2015-03-06T11:55:06 U_dcs_trcfmt_angle=E\n2015-03-06T11:55:06 U_dcs_trcfmt_count=1440\n2015-03-06T11:55:06 U_dcs_trcfmt_format=1\n2015-03-06T11:55:06 U_job_req_del=0\n2015-03-06T11:55:06 U_job_req_port=0\n2015-03-06T11:55:06 U_machine_id=0\n2015-03-06T11:55:06 U_tracer=1\n2015-03-06T11:55:06 U_tracer_baudrate=115200\n2015-03-06T11:55:06 U_tracer_protocol=0\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [UI_FRAME_FITTING]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [UI_FRAME_FITTING2]\n2015-03-06T11:55:06 [XnclWidget::loadXML] Version: [1.0], Section: [MOTOR_GENERAL], Mode: [ff]\n2015-03-06T11:55:06 [XnclWidget::loadXML] OK\n2015-03-06T11:55:06 [XnclWidget::loadXML] Version: [1.0], Section: [MOTOR_ROTATION], Mode: [ff]\n2015-03-06T11:55:06 [XnclWidget::loadXML] OK\n2015-03-06T11:55:06 [XnclWidget::loadXML] Version: [1.0], Section: [MOTOR_CLAMP], Mode: [ff]\n2015-03-06T11:55:06 [XnclWidget::loadXML] OK\n2015-03-06T11:55:06 [XnclWidget::loadXML] Version: [1.0], Section: [MOTOR_USER_SIZE_ADJ], Mode: [ff]\n2015-03-06T11:55:06 [XnclWidget::loadXML] OK\n2015-03-06T11:55:06 [XnclWidget::loadXML] Version: [1.0], Section: [MOTOR_USER_MARGIN_ADJ], Mode: [ff]\n2015-03-06T11:55:06 [XnclWidget::loadXML] OK\n2015-03-06T11:55:06 [XnclWidget::loadXML] Version: [1.0], Section: [MOTOR_USER_AXIS_ADJ], Mode: [ff]\n2015-03-06T11:55:06 [XnclWidget::loadXML] OK\n2015-03-06T11:55:06 [XnclWidget::loadXML] Version: [1.0], Section: [MOTOR_USER_BEVEL_GRV_ADJ], Mode: [ff]\n2015-03-06T11:55:06 [XnclWidget::loadXML] OK\n2015-03-06T11:55:06 [XnclWidget::loadXML] Version: [1.0], Section: [MOTOR_USER_SB_ADJ], Mode: [ff]\n2015-03-06T11:55:06 [XnclWidget::loadXML] OK\n2015-03-06T11:55:06 [XnclWidget::loadXML] Version: [1.0], Section: [MOTOR_GRV_SB_COMPEN], Mode: [ff]\n2015-03-06T11:55:06 [XnclWidget::loadXML] OK\n2015-03-06T11:55:06 [XnclWidget::loadXML] Version: [1.0], Section: [MOTOR_SIZE_ADJ], Mode: [ff]\n2015-03-06T11:55:06 [XnclWidget::loadXML] OK\n2015-03-06T11:55:06 [XnclWidget::loadXML] Version: [1.0], Section: [MOTOR_MARGIN_ADJ], Mode: [ff]\n2015-03-06T11:55:06 [XnclWidget::loadXML] OK\n2015-03-06T11:55:06 [XnclWidget::loadXML] Version: [1.0], Section: [MOTOR_AXIS_ADJ], Mode: [ff]\n2015-03-06T11:55:06 [XnclWidget::loadXML] OK\n2015-03-06T11:55:06 [XnclWidget::loadXML] Version: [1.0], Section: [MOTOR_BEVEL_GRV_ADJ], Mode: [ff]\n2015-03-06T11:55:06 [XnclWidget::loadXML] OK\n2015-03-06T11:55:06 [XnclWidget::loadXML] Version: [1.0], Section: [MOTOR_SB_ADJ], Mode: [ff]\n2015-03-06T11:55:06 [XnclWidget::loadXML] OK\n2015-03-06T11:55:06 [XnclWidget::loadXML] Version: [1.0], Section: [MOTOR_MILLING], Mode: [ff]\n2015-03-06T11:55:06 [XnclWidget::loadXML] OK\n2015-03-06T11:55:06 [XnclWidget::loadXML] Version: [1.0], Section: [MOTOR_DRILL], Mode: [ff]\n2015-03-06T11:55:06 [XnclWidget::loadXML] OK\n2015-03-06T11:55:06 [XnclWidget::loadXML] Version: [1.0], Section: [MOTOR_WHEEL], Mode: [ff]\n2015-03-06T11:55:06 [XnclWidget::loadXML] OK\n2015-03-06T11:55:06 [XnclWidget::loadXML] Version: [1.0], Section: [MOTOR_CONTROL], Mode: [ff]\n2015-03-06T11:55:06 [XnclWidget::loadXML] OK\n2015-03-06T11:55:06 [XnclWidget::loadXML] Version: [1.0], Section: [MOTOR_CONTROL], Mode: [ff]\n2015-03-06T11:55:06 [XnclWidget::loadXML] OK\n2015-03-06T11:55:06 [XnclWidget::loadXML] Version: [1.0], Section: [MOTOR_CALIBRATION], Mode: [ff]\n2015-03-06T11:55:06 [XnclWidget::loadXML] OK\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [Dlg_SettingAdjustments::on_tabWidget_currentChanged] Index: [0]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_ROTATION]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_CLAMP]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_USER_SIZE_ADJ]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_USER_MARGIN_ADJ]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_USER_AXIS_ADJ]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_USER_BEVEL_GRV_ADJ]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_USER_SB_ADJ]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_GRV_SB_COMPEN]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_SIZE_ADJ]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_MARGIN_ADJ]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_AXIS_ADJ]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_BEVEL_GRV_ADJ]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_SB_ADJ]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_MILLING]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_DRILL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_WHEEL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_CONTROL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_CONTROL]\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [MOTOR_CALIBRATION]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [MOTOR_GENERAL]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [MOTOR_ROTATION]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [MOTOR_CLAMP]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [MOTOR_USER_SIZE_ADJ]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [MOTOR_USER_MARGIN_ADJ]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [MOTOR_USER_AXIS_ADJ]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [MOTOR_USER_BEVEL_GRV_ADJ]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [MOTOR_USER_SB_ADJ]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [MOTOR_GRV_SB_COMPEN]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [MOTOR_SIZE_ADJ]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [MOTOR_MARGIN_ADJ]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [MOTOR_AXIS_ADJ]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [MOTOR_BEVEL_GRV_ADJ]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [MOTOR_SB_ADJ]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [MOTOR_MILLING]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [MOTOR_DRILL]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [MOTOR_WHEEL]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [MOTOR_CONTROL]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [MOTOR_CALIBRATION]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setData] Section: [MOTOR_WHEEL], ID: [M_wheel_option], Data: [0]\n2015-03-06T11:55:06 WARN  QLayout: Attempting to add QLayout \"\" to WidgetTestMotorSensorInfo \"tab_sensor\", which already has a layout\n2015-03-06T11:55:06 WARN  QLayout: Attempting to add QLayout \"\" to WidgetTestXYR \"tab_xyr\", which already has a layout\n2015-03-06T11:55:06 WARN  QLayout: Attempting to add QLayout \"\" to WidgetTestFeeler \"tab_feeler\", which already has a layout\n2015-03-06T11:55:06 WARN  QLayout: Attempting to add QLayout \"\" to WidgetTestSbgWheel \"tab_sbgWheel\", which already has a layout\n2015-03-06T11:55:06 WARN  QLayout: Attempting to add QLayout \"\" to WidgetTestPumpVacuum \"tab_pump\", which already has a layout\n2015-03-06T11:55:06 WARN  QLayout: Attempting to add QLayout \"\" to WidgetTestClampWindow \"tab_clampWindow\", which already has a layout\n2015-03-06T11:55:06 WARN  QLayout: Attempting to add QLayout \"\" to WidgetTestDrillpart \"tab_drill\", which already has a layout\n2015-03-06T11:55:06 [XnclWidget::loadXML] Version: [1.0], Section: [DRILL_ADJUSTMENT], Mode: [ff]\n2015-03-06T11:55:06 [XnclWidget::loadXML] OK\n2015-03-06T11:55:06 [XnclWidget::loadXML] Version: [1.0], Section: [DRILL_CONTROL], Mode: [ff]\n2015-03-06T11:55:06 [XnclWidget::loadXML] OK\n2015-03-06T11:55:06 [XnclWidget::loadXML] Version: [1.0], Section: [DRILL_CALIBRATION], Mode: [ff]\n2015-03-06T11:55:06 [XnclWidget::loadXML] OK\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [DRILL_ADJUSTMENT]\n2015-03-06T11:55:06 [XnclWidget::setDataList] Empty.\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [DRILL_CONTROL]\n2015-03-06T11:55:06 [XnclWidget::setDataList] Empty.\n2015-03-06T11:55:06 [ConfigManager::getDataList] Section: [DRILL_CALIBRATION]\n2015-03-06T11:55:06 [XnclWidget::setDataList] Empty.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [DRILL_ADJUSTMENT]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [DRILL_CONTROL]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [ConfigManager::setDataList] Section: [DRILL_CALIBRATION]\n2015-03-06T11:55:06 [ConfigManager::setDataList] Done.\n2015-03-06T11:55:06 [Dlg_Setting::changeMaintenanceMode] mode = 0\n2015-03-06T11:55:06 [Dlg_JobManager::initInternalJobList]\n2015-03-06T11:55:06 HEADER: HUVITZ_JOB_DATA = 1;JOB;20111021;120547;NEX\n2015-03-06T11:55:06 HEADER: HUVITZ_JOB_DATA = 1;JOB;20111021;120521;NEX\n2015-03-06T11:55:06 HEADER: HUVITZ_JOB_DATA = 1;JOB;20111021;120532;NEX\n2015-03-06T11:55:06 HEADER: HUVITZ_JOB_DATA = 3;JOB;20130320;171103;NEX\n2015-03-06T11:55:06 HEADER: HUVITZ_JOB_DATA = 1;JOB;20111021;120558;NEX\n2015-03-06T11:55:06 HEADER: HUVITZ_JOB_DATA = 1;JOB;20111021;120441;NEX\n2015-03-06T11:55:06 HEADER: HUVITZ_JOB_DATA = 1;JOB;20111021;120617;NEX\n2015-03-06T11:55:06 HEADER: HUVITZ_JOB_DATA = 1;JOB;20111111;092313;NEX\n2015-03-06T11:55:06 HEADER: HUVITZ_JOB_DATA = 3;JOB(DRILL);20130326;145737;NEX\n2015-03-06T11:55:06 HEADER: HUVITZ_JOB_DATA = 1;JOB(DRILL);20120424;135054;NEX\n2015-03-06T11:55:06 HEADER: HUVITZ_JOB_DATA = 1;JOB(DRILL);20120424;135156;NEX\n2015-03-06T11:55:06 HEADER: HUVITZ_JOB_DATA = 1;JOB(DRILL);20120424;135359;NEX\n2015-03-06T11:55:06 HEADER: HUVITZ_JOB_DATA = 8;JOB(DRILL);20140915;172122;NEX\n2015-03-06T11:55:06 HEADER: HUVITZ_JOB_DATA = 8;JOB(DRILL);20140915;132107;NEX\n2015-03-06T11:55:06 HEADER: HUVITZ_JOB_DATA = 1;JOB(DRILL);20120424;135000;NEX\n2015-03-06T11:55:06 HEADER: HUVITZ_JOB_DATA = 1;JOB(DRILL);20120424;135303;NEX\n2015-03-06T11:55:06 [Dlg_JobManager::on_tabWidget_currentChanged] Index: [0]\n2015-03-06T11:55:06 [Dlg_JobManager::updateButtonStatus] Index: [0]\n2015-03-06T11:55:06 [Dlg_JobManager::updatePreviewInformation] Index: [0]\n2015-03-06T11:55:06 [Dlg_JobManager::terminateSearch]\n2015-03-06T11:55:06 [Dlg_JobManager::refreshAllList]\n2015-03-06T11:55:06 [Dlg_JobManager::refreshWorkingJobList]\n2015-03-06T11:55:06 [Dlg_JobManager::updateButtonStatus] Index: [0]\n2015-03-06T11:55:06 [Dlg_JobManager::refreshSdcardJobList]\n2015-03-06T11:55:06 [Dlg_JobManager::refreshInternalJobList]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] START\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] Right: [50.00], Left: [50.00]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - NOT setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL: [15.00], MPD: [65.00]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] END\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] START\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] Right: [44.00], Left: [44.00]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - NOT setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL: [15.00], MPD: [59.00]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] END\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] START\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] Right: [50.98], Left: [50.98]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - NOT setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL: [15.00], MPD: [65.98]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] END\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] START\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] Right: [58.00], Left: [58.00]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - NOT setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL: [15.00], MPD: [73.00]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] END\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] START\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] Right: [47.56], Left: [47.56]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - NOT setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL: [15.00], MPD: [62.56]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] END\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] START\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] Right: [40.01], Left: [40.01]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - NOT setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL: [15.00], MPD: [55.01]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] END\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] START\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] END\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] START\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] Right: [56.56], Left: [56.56]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - NOT setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL: [15.00], MPD: [71.56]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] END\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] START\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] Right: [40.00], Left: [40.00]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - NOT setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL: [15.00], MPD: [55.00]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] END\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] START\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] Right: [50.00], Left: [50.00]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - NOT setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL: [15.00], MPD: [65.00]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] END\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] START\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] Right: [50.00], Left: [50.00]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - NOT setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL: [15.00], MPD: [65.00]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] END\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] START\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] Right: [50.00], Left: [50.00]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - NOT setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL: [15.00], MPD: [65.00]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] END\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] START\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] END\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] START\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] END\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] START\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] Right: [40.00], Left: [40.00]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - NOT setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL: [15.00], MPD: [55.00]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] END\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] START\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] Right: [40.00], Left: [40.00]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - NOT setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] DBL: [15.00], MPD: [55.00]\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] MPD - setted.\n2015-03-06T11:55:06 [DataConverter::do_NEX_Adjustments] END\n2015-03-06T11:55:06 [Dlg_JobManager::sortInternal]\n2015-03-06T11:55:06 WARN  libpng warning: Incorrect sBIT chunk length\n2015-03-06T11:55:06 WARN  libpng warning: Incorrect sBIT chunk length\n2015-03-06T11:55:06 [Dlg_DigitalPattern::initUi]\n2015-03-06T11:55:07 DBG pixmap size = 138,104\n2015-03-06T11:55:07 uname: -r [3.13.0-46-generic]\n2015-03-06T11:55:07 uname: -v [Mar 2 18:23:39 UTC 2015]\n2015-03-06T11:55:07 [CommPortManager_80::initMotor]\n2015-03-06T11:55:07 [SerialHandler::startService] Failed to open serial port: [/dev/ttyUSB2]\n2015-03-06T11:55:07 [AbstractCommPortManager<T>::openPort] Error - Start\n2015-03-06T11:55:07 [Dlg_Start::initialize] Failed - CommPortManager_80::instance().initMotor()\n2015-03-06T11:55:07 [CommPortManager_80::initDrill]\n2015-03-06T11:55:07 [SerialHandler::startService] Failed to open serial port: [/dev/ttyUSB3]\n2015-03-06T11:55:07 [AbstractCommPortManager<T>::openPort] Error - Start\n2015-03-06T11:55:07 [Dlg_Start::initialize] Failed - CommPortManager_80::instance().initDrill()\n2015-03-06T11:55:07 [CommPortManager_80::initBarcode]\n2015-03-06T11:55:07 [SerialHandler::startService] Failed to open serial port: [/dev/ttyUSB4]\n2015-03-06T11:55:07 [AbstractCommPortManager<T>::openPort] Error - Start\n2015-03-06T11:55:07 [Dlg_Start::initialize] Failed - CommPortManager_80::instance().initBarcode()\n2015-03-06T11:55:07 [CommPortManager_80::initTracer]\n2015-03-06T11:55:07 [SerialHandler::startService] Failed to open serial port: [/dev/ttyUSB5]\n2015-03-06T11:55:07 [AbstractCommPortManager<T>::openPort] Error - Start\n2015-03-06T11:55:07 [Dlg_Start::initialize] Failed - CommPortManager_80::instance().initTracer()\n2015-03-06T11:55:07 [CommPortManager_80::initBlocker]\n2015-03-06T11:55:08 [SerialHandler::startService] Failed to open serial port: [/dev/ttyUSB6]\n2015-03-06T11:55:08 [AbstractCommPortManager<T>::openPort] Error - Start\n2015-03-06T11:55:08 [Dlg_Start::initialize] Failed - CommPortManager_80::instance().initBlocker()\n2015-03-06T11:55:08 [AbstractDlg_Start::initialize] Done\n2015-03-06T11:55:08 [Dlg_Start::start]\nhpe8000 gui initialized.\n2015-03-06T11:55:08 [ConfigManager::setDataList] Done. 2 items\n2015-03-06T11:59:16 [UI] [Dlg_Main::slot_jobManager_pressed]\n2015-03-06T11:59:16 [UI] [Dlg_Main::slot_jobManager_released]\n2015-03-06T11:59:16 [UI] [Dlg_EdgerMain::slot_jobManager_clicked]\n2015-03-06T11:59:16 [Dlg_JobManager::showEvent]\n2015-03-06T11:59:16 [Dlg_JobManager::refreshAllList]\n2015-03-06T11:59:16 [Dlg_JobManager::refreshWorkingJobList]\n2015-03-06T11:59:16 [Dlg_JobManager::updateButtonStatus] Index: [0]\n2015-03-06T11:59:16 [Dlg_JobManager::refreshSdcardJobList]\n2015-03-06T11:59:16 [Dlg_JobManager::refreshInternalJobList]\n2015-03-06T11:59:16 [Dlg_JobManager::updateButtonStatus] Index: [0]\n2015-03-06T11:59:16 [Dlg_JobManager::updatePreviewInformation] Index: [0]\n2015-03-06T11:59:16 [Dlg_JobManager::setStateOfBarcodeOnJm]\n2015-03-06T11:59:16 [Dlg_JobManager::terminateSearch]\n2015-03-06T11:59:16 [Dlg_JobManager::refreshAllList]\n2015-03-06T11:59:16 [Dlg_JobManager::refreshWorkingJobList]\n2015-03-06T11:59:16 [Dlg_JobManager::updateButtonStatus] Index: [0]\n2015-03-06T11:59:16 [Dlg_JobManager::refreshSdcardJobList]\n2015-03-06T11:59:16 [Dlg_JobManager::refreshInternalJobList]\n2015-03-06T11:59:17 [Dlg_JobManager::on_tabWidget_currentChanged] Index: [4]\n2015-03-06T11:59:17 [Dlg_JobManager::updateButtonStatus] Index: [4]\n2015-03-06T11:59:17 [Dlg_JobManager::updatePreviewInformation] Index: [4]\n2015-03-06T11:59:17 [Dlg_JobManager::on_treeWidget_internal_itemSelectionChanged]\n2015-03-06T11:59:17 [Dlg_JobManager::updateButtonStatus] Index: [4]\n2015-03-06T11:59:17 [Dlg_JobManager::updatePreviewInformation] Index: [4]\n2015-03-06T11:59:17 [DataConverter::do_NEX_Adjustments] START\n2015-03-06T11:59:17 [DataConverter::do_NEX_Adjustments] Right: [50.98], Left: [50.98]\n2015-03-06T11:59:17 [DataConverter::do_NEX_Adjustments] DBL - setted.\n2015-03-06T11:59:17 [DataConverter::do_NEX_Adjustments] MPD - NOT setted.\n2015-03-06T11:59:17 [DataConverter::do_NEX_Adjustments] DBL: [15.00], MPD: [65.98]\n2015-03-06T11:59:17 [DataConverter::do_NEX_Adjustments] MPD - setted.\n2015-03-06T11:59:17 [DataConverter::do_NEX_Adjustments] END\n2015-03-06T11:59:18 [Dlg_JobManager::on_pushButton_open_clicked]\n2015-03-06T11:59:18 [Dlg_JobManager::on_pushButton_open_clicked] Internal data open as [2015030600001]\n2015-03-06T11:59:18 [Dlg_EdgerMain::slotFrameDataOpen] JOB: [2015030600001], UID: [1]\n2015-03-06T11:59:18 [DataConverter::do_NEX_Adjustments] START\n2015-03-06T11:59:18 [DataConverter::do_NEX_Adjustments] Right: [50.98], Left: [50.98]\n2015-03-06T11:59:18 [DataConverter::do_NEX_Adjustments] DBL - setted.\n2015-03-06T11:59:18 [DataConverter::do_NEX_Adjustments] MPD - NOT setted.\n2015-03-06T11:59:18 [DataConverter::do_NEX_Adjustments] DBL: [15.00], MPD: [65.98]\n2015-03-06T11:59:18 [DataConverter::do_NEX_Adjustments] MPD - setted.\n2015-03-06T11:59:18 [DataConverter::do_NEX_Adjustments] END\n2015-03-06T11:59:18 [Dlg_EdgerMain::setDefaultBevelPosValue]\n2015-03-06T11:59:18 [Dlg_Main::updateUi_jobNumber] JOB: [2015030600001]\n2015-03-06T11:59:18 [Dlg_EdgerMain::setDefaultDeltaY]\n2015-03-06T11:59:18 [Dlg_EdgerMain::updateLinkFlag] m_linkFlag = 1\n2015-03-06T11:59:18 [Dlg_JobManager::hideEvent]",
+			"settings":
+			{
+				"buffer_size": 41080,
+				"line_ending": "Unix",
+				"name": "Starting /home/saibi/work_space/nex_gui/new/nex_ed"
+			}
+		}
+	],
+	"build_system": "Packages/Makefile/Make.sublime-build",
+	"command_palette":
+	{
+		"height": 222.0,
+		"selected_items":
+		[
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"pa remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"pa list",
+				"Package Control: List Packages"
+			],
+			[
+				"package con",
+				"Package Control: Remove Package"
+			],
+			[
+				"pa install",
+				"Package Control: Install Package"
+			],
+			[
+				"pack install",
+				"Package Control: Install Package"
+			],
+			[
+				"packagecontrol:insta",
+				"Package Control: Install Package"
+			],
+			[
+				"cscope",
+				"Cscope: Look up functions calling this function"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"close",
+				"File: Close All"
+			],
+			[
+				"rebuild",
+				"CTags: Rebuild Tags"
+			],
+			[
+				"ctags",
+				"CTags: Rebuild Tags"
+			],
+			[
+				"ctag",
+				"CTags: Show Symbols (all)"
+			],
+			[
+				"clean",
+				"Build: Clean"
+			],
+			[
+				"fold",
+				"Project: Add Folder"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/saibi/test/www/js/callback2.html",
+		"/home/saibi/test/www/js/callback3.html",
+		"/home/saibi/test/www/js/inner.html",
+		"/home/saibi/test/www/js/inner2.html",
+		"/home/saibi/test/www/js/closure.html",
+		"/home/saibi/test/www/js/closure2.html",
+		"/home/saibi/test/www/js/scope5.html",
+		"/home/saibi/test/www/js/scope4.html",
+		"/home/saibi/test/www/js/scope2.html",
+		"/home/saibi/test/www/js/scope.html",
+		"/home/saibi/test/www/js/scope3.html",
+		"/home/saibi/test/www/js/greeting.js",
+		"/home/saibi/test/www/js/lib1.html",
+		"/home/saibi/test/www/js/jquery-1.11.2.js",
+		"/home/saibi/test/www/js/module1.html",
+		"/home/saibi/test/www/js/object1.html",
+		"/home/saibi/test/www/js/object2.html",
+		"/home/saibi/test/www/js/array/array1.html",
+		"/home/saibi/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/saibi/test/www/js/func/func2.html",
+		"/home/saibi/test/www/js/func/func3.html",
+		"/home/saibi/test/www/js/func/func4.html",
+		"/home/saibi/test/www/js/func/func1.html",
+		"/home/saibi/test/www/js/number/demo6.js",
+		"/home/saibi/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/saibi/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/saibi/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+		"/home/saibi/test/www/js/number/demo4.html",
+		"/home/saibi/test/www/js/number/demo5.html",
+		"/home/saibi/test/www/js/number/demo1.html",
+		"/home/saibi/test/www/js/helloworld.html",
+		"/home/saibi/test/www/js/number/demo3.html",
+		"/home/saibi/test/www/js/number/demo2.html",
+		"/home/saibi/work_space/autocrat/shared/src/edger_shared/edger_sensor.h",
+		"/home/saibi/work_space/autocrat/shared/src/edger_shared/edger_sensor.c",
+		"/home/saibi/work_space/autocrat/inc_ssl/ssl_alloc.h",
+		"/home/saibi/work_space/autocrat/shared/src/edger_shared/feeling_cal_acc.c",
+		"/home/saibi/work_space/autocrat/edger/grooving.c",
+		"/home/saibi/work_space/autocrat/shared/get_hg_rev.sh",
+		"/home/saibi/work_space/autocrat/shared/src/keypad_shared/get_keypad.c",
+		"/home/saibi/work_space/autocrat/Debug/shared/src/keypad_shared/get_keypad.o.lst",
+		"/home/saibi/work_space/autocrat/shared/src/edger_shared/autofree_alloc.c",
+		"/home/saibi/work_space/autocrat/Debug/shared/src/edger_shared/autofree_alloc.d",
+		"/home/saibi/work_space/autocrat/edger/sensor_str.c",
+		"/home/saibi/work_space/autocrat/Main.c",
+		"/home/saibi/work_space/autocrat/shared/src/keypad_shared/stop_key.c",
+		"/home/saibi/work_space/autocrat/Dave/Generated/inc/IO003/IO003.h",
+		"/home/saibi/work_space/autocrat/edger/sensor_str.h",
+		"/home/saibi/work_space/autocrat/shared/src/comm_shared/init_comm.c",
+		"/home/saibi/work_space/autocrat/shared/src/cmd_shared/dev_cmd_list.c",
+		"/home/saibi/work_space/autocrat/shared/src/data_shared/register_symbol.c",
+		"/home/saibi/work_space/autocrat/shared/src/cmd_shared/setup_lib.c",
+		"/home/saibi/.config/sublime-text-3/Packages/User/CTags.sublime-settings",
+		"/home/saibi/.config/sublime-text-3/Packages/CTags/CTags.sublime-settings",
+		"/home/saibi/work_space/autocrat/inc_ssl/ssl_etc.h",
+		"/home/saibi/work_space/autocrat/Debug/sources.mk"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"var",
+			"SSL_FREE",
+			"get_all_edger_sensor_value_str",
+			"isr_stop_key_handler",
+			"add_cmd_list_table"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "callback.html",
+					"settings":
+					{
+						"buffer_size": 297,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								297,
+								297
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "arg.html",
+					"settings":
+					{
+						"buffer_size": 349,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								323,
+								323
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"settings":
+					{
+						"buffer_size": 41080,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								36081,
+								36081
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Starting /home/saibi/work_space/nex_gui/new/nex_ed",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 9099.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 261.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"demo4",
+				"number/demo4.html"
+			],
+			[
+				"sensor",
+				"edger/sensor_str.h"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}
