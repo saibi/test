@@ -15,6 +15,11 @@ public:
 	explicit Dialog(QWidget *parent = 0);
 	~Dialog();
 
+private slots:
+	void on_pushButton_hello_clicked();
+
+	void on_pushButton_close_clicked();
+
 private:
 	Ui::Dialog *ui;
 };
