@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 
 #include <QMessageBox>
+#include <QDateTime>
 
 MainWindow::MainWindow(QWidget *parent) :
 	QMainWindow(parent),
@@ -47,4 +48,13 @@ void MainWindow::on_pushButton_wps_clicked()
 	const QString &arg1 = wpsStr.section(' ', 1, 1, QString::SectionSkipEmpty);
 
 	qDebug("%s", qPrintable(arg1));
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+	qsrand( QDateTime::currentDateTime().toMSecsSinceEpoch() );
+
+	int ch = ((qrand() % 95) + '!');
+	qDebug("%d , %c", ch, ch );
+
 }
