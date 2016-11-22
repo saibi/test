@@ -2,10 +2,11 @@
 
 #include <QDateTime>
 
-ConfigManager::ConfigManager(QObject *parent) : QObject(parent)
+ConfigManager::ConfigManager(QObject *parent) : QObject(parent), _mutex(QMutex::NonRecursive)
 {
 	qsrand( QDateTime::currentDateTime().toMSecsSinceEpoch() );
 
+	m_error = 0;
 }
 
 ConfigManager::~ConfigManager()
@@ -14,6 +15,8 @@ ConfigManager::~ConfigManager()
 
 bool ConfigManager::reopen()
 {
+	QMutexLocker locker(&_mutex);
+
 	qDebug("[ConfigManager::reopen]");
 
 	return true;
@@ -21,11 +24,13 @@ bool ConfigManager::reopen()
 
 bool ConfigManager::setData()
 {
+	QMutexLocker locker(&_mutex);
+
 	qDebug("[ConfigManager::setData]");
 
-	int number = qrand() % 100;
+	m_error = qrand() % 100;
 
-	if ( number & 0x01 )
+	if ( m_error & 0x01 )
 	{
 		qDebug("[ConfigManager::setData] true");
 		return true;
@@ -33,13 +38,17 @@ bool ConfigManager::setData()
 	else
 	{
 		qDebug("[ConfigManager::setData] false");
-		throw number;
+		throw m_error;
 	}
+	qDebug("[ConfigManager::setData] end");
+
 	return false;
 }
 
 bool ConfigManager::close()
 {
+	QMutexLocker locker(&_mutex);
+
 	qDebug("[ConfigManager::close]");
 	return true;
 }

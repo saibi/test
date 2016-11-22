@@ -2,6 +2,7 @@
 #define CONFIGMANAGER_H
 
 #include <QObject>
+#include <QMutex>
 
 class ConfigManager : public QObject
 {
@@ -12,6 +13,8 @@ public:
 	~ConfigManager();
 
 	Q_DISABLE_COPY(ConfigManager)
+
+	int getErrorCode() { return m_error; }
 
 public:
 	static ConfigManager & instance()
@@ -24,6 +27,10 @@ public:
 	bool setData();
 	bool close();
 
+private:
+	QMutex _mutex;
+
+	int m_error;
 };
 
 #endif // CONFIGMANAGER_H
