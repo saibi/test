@@ -23,6 +23,10 @@ QString ScrollText::text() const
 void ScrollText::setText(QString text)
 {
 	_text = text;
+
+	setFixedHeight(fontMetrics().height());
+	leftMargin = height() / 3;
+
 	updateText();
 	update();
 }

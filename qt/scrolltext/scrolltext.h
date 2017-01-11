@@ -1,6 +1,11 @@
 #ifndef SCROLLTEXT_H
 #define SCROLLTEXT_H
 
+//
+// Scrolling text widget from http://stackoverflow.com/questions/10651514/text-scrolling-marquee-in-qlabel
+//
+// modified by saibi
+
 #include <QWidget>
 #include <QStaticText>
 #include <QTimer>

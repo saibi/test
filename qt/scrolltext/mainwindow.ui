@@ -19,9 +19,20 @@
      <rect>
       <x>80</x>
       <y>50</y>
-      <width>271</width>
-      <height>80</height>
+      <width>411</width>
+      <height>81</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>60</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#widget {
+	background: yellow;
+	color: red;
+}</string>
     </property>
    </widget>
   </widget>
