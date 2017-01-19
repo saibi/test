@@ -1,0 +1,15 @@
+mystringtest.cpp:28Assertion
+Test name: checkLength
+assertion failed
+- Expression: s.size() == 0
+- String Length Non-Zero
+
+mystringtest.cpp:35Assertion
+Test name: checkValue
+equality assertion failed
+- Expected: w
+- Actual  : h
+- Corrupt String Data
+
+Failures !!!
+Run: 2   Failure total: 2   Failures: 2   Errors: 0
