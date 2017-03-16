@@ -1,6 +1,15 @@
 #!/usr/bin/python3
 
 from urllib.request import urlopen
-html = urlopen("http://pythonscraping.com/pages/page1.html")
+url_str = "http://pythonscraping.com/pages/page1.html"
+user_input = input("Enter URL : ")
+if user_input != "":
+	url_str = user_input
+
+if "http://" not in url_str:
+	url_str = "http://" + url_str
+
+print("open " + url_str)
+html = urlopen(url_str)
 print(html.read())
 
