@@ -6,7 +6,53 @@
 #include <termios.h>
 #include <unistd.h>
 
-static int set_interface_attribs(int fd, int speed)
+#include "serial.h"
+
+struct iso16284_code_to_str iso16284_string_table[] = { 
+	{ CHAR_CR, "<CR>", 4 },
+	{ CHAR_FS, "<FS>", 4},
+	{ CHAR_GS, "<GS>", 4 },
+	{ CHAR_ACK, "<ACK>", 5 },
+	{ CHAR_NAK, "<NAK>", 5 },
+	{ CHAR_RS, "<RS>", 4 },
+	{ CHAR_LF, "<LF>", 4 },
+	{ CHAR_ESC, "<ESC>", 5 },
+	{ -1, "<CR/LF>", 7 },
+	{ -1, NULL, -1 },
+};
+
+/// iso16284 통신 stream 출력 
+/// \param addr source buf pointer (null-terminated string)
+/// \param max
+void print_iso16284_stream_ex(void *addr, int max)
+{
+	char * ptr = (char *)addr;
+	int reserved = 0;
+	int i, counter;
+
+	for ( counter = 0 ; *ptr && counter < max ; ptr++, counter++ ) {
+		for ( i = 0 ; iso16284_string_table[i].code >= 0; i++) {
+			if ( iso16284_string_table[i].code == *ptr ) {
+				fputs(iso16284_string_table[i].str, stdout);
+				if ( *ptr != CHAR_ESC ) {
+					fputs("\n", stdout);
+				}
+				reserved = 1;
+				break;
+			}
+		}
+		if ( !reserved )  {
+			if ( (*ptr < ' ') || (*ptr >= 127) ) {
+				fprintf(stdout, "\\%02X", (unsigned int)*ptr);	
+			} else {
+				fputc(*ptr, stdout);
+			}
+		}
+		reserved = 0;
+	}
+}
+
+int set_interface_attribs(int fd, int speed)
 {
 	struct termios tty;
 
@@ -43,7 +89,7 @@ static int set_interface_attribs(int fd, int speed)
 	return 0;
 }
 
-static void set_mincount(int fd, int mcount)
+void set_mincount(int fd, int mcount)
 {
 	struct termios tty;
 
@@ -60,9 +106,15 @@ static void set_mincount(int fd, int mcount)
 		printf("Error tcsetattr: %s\n", strerror(errno));
 }
 
+unsigned char buf[MAX_BUF];
+
 int main(int argc, char *argv[])
 {
+#ifdef __arm__
+	char *portname = "/dev/ttyS2";
+#else 
 	char *portname = "/dev/ttyUSB0";
+#endif 
 	int fd;
 	int wlen;
 
@@ -87,12 +139,15 @@ int main(int argc, char *argv[])
 	/* simple noncanonical input */
 	do
 	{
-		unsigned char buf[80];
 		int rdlen;
 
 		rdlen = read(fd, buf, sizeof(buf) - 1);
 		if (rdlen > 0)
 		{
+			print_iso16284_stream_ex(buf, rdlen);
+			fflush(stdout);
+
+#if 0
 #ifdef DISPLAY_STRING
 			buf[rdlen] = 0;
 			printf("Read %d: \"%s\"\n", rdlen, buf);
@@ -103,6 +158,7 @@ int main(int argc, char *argv[])
 				printf(" 0x%x", *p);
 			printf("\n");
 #endif
+#endif 
 		} else if (rdlen < 0)
 		{
 			printf("Error from read: %d: %s\n", rdlen, strerror(errno));
@@ -110,3 +166,4 @@ int main(int argc, char *argv[])
 		/* repeat read to get full message */
 	} while (1);
 }
+

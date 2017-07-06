@@ -13,11 +13,19 @@ CPPCHECK=
 NSIQ=
 endif
 
+ifdef A20
+CC=arm-linux-gnueabihf-gcc
+LD=arm-linux-gnueabihf-ld
+AR=arm-linux-gnueabihf-ar
+AR=arm-linux-gnueabihf-ar
+OC=arm-linux-gnueabihf-objcopy
+else
 CC=gcc
 LD=ld
 AR=ar
 AR=ar
 OC=objcopy
+endif
 
 ifdef V
 ifeq ("$(origin V)", "command line")
