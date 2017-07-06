@@ -152,12 +152,13 @@ int main(int argc, char *argv[])
 	}
 	tcdrain(fd);	/* delay for output */
 
+	printf("-----START-----\n");
 	if ( print_mode ) 
 		packet_read_loop(fd, timeout);
 	else 
 		packet_save_loop(fd, timeout);
-
-
+	printf("-----END-----\n");
+	fprintf(stderr, "bye\n");
 }
 
 void normal_read_loop(int fd)
@@ -209,7 +210,7 @@ void packet_read_loop(int fd, int timeout)
 			printf("Error from read: %d: %s\n", rdlen, strerror(errno));
 		}
 		start = time(NULL);
-	} while (1);
+	} 
 }
 
 #define MAX_BUF (1024*1024)
