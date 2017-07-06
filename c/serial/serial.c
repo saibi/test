@@ -43,7 +43,7 @@ void print_iso16284_stream_ex(unsigned char *ptr, int max)
 		}
 		if ( !reserved )  {
 			if ( (*ptr < ' ') || (*ptr >= 127) ) {
-				fprintf(stdout, "\\%02X", (unsigned int)*ptr);	
+				fprintf(stdout, "\\x%02X", (unsigned int)*ptr);	
 			} else {
 				fputc(*ptr, stdout);
 			}
