@@ -56,7 +56,7 @@ INC=-I.
 COPTS=-Wstrict-prototypes -Wno-trigraphs 
 COPTS+=-fno-strict-aliasing -fno-common -pipe
 COPTS+=-Wmissing-declarations -Winline -Wshadow -Wreturn-type -Wundef -Wpointer-arith -Wbad-function-cast
-COPTS+=-Wcast-align -Wsign-compare -Wunused-function
+COPTS+=-Wcast-align # -Wsign-compare -Wunused-function
 COPTS+=-Wall -std=gnu99 -ffunction-sections
 
 CFLAGS=$(DEFS) $(INC) $(COPTS)

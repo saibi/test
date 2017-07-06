@@ -5,6 +5,7 @@
 #include <string.h>
 #include <termios.h>
 #include <unistd.h>
+#include <time.h>
 
 #include "serial.h"
 
@@ -106,8 +107,6 @@ void set_mincount(int fd, int mcount)
 		printf("Error tcsetattr: %s\n", strerror(errno));
 }
 
-unsigned char buf[MAX_BUF];
-
 int main(int argc, char *argv[])
 {
 #ifdef __arm__
@@ -117,6 +116,22 @@ int main(int argc, char *argv[])
 #endif 
 	int fd;
 	int wlen;
+
+	int print_mode = 1;
+	int timeout = 60;
+
+	if ( argc > 1 )
+	{
+		if ( strcmp(argv[1], "b") == 0 ) 
+		{
+			print_mode = 0;
+			printf("buffering mode\n");
+		}
+
+		if ( atoi(argv[2]) > 0 )
+			timeout = atoi(argv[2]);
+	}
+
 
 	fd = open(portname, O_RDWR | O_NOCTTY | O_SYNC);
 	if (fd < 0)
@@ -136,18 +151,26 @@ int main(int argc, char *argv[])
 	}
 	tcdrain(fd);	/* delay for output */
 
+	if ( print_mode ) 
+		packet_read_loop(fd);
+	else 
+		packet_save_loop(fd, timeout);
+
+
+
+}
+
+void normal_read_loop(int fd)
+{
+	unsigned char buf[1024];
+	int rdlen;
+
 	/* simple noncanonical input */
 	do
 	{
-		int rdlen;
-
 		rdlen = read(fd, buf, sizeof(buf) - 1);
 		if (rdlen > 0)
 		{
-			print_iso16284_stream_ex(buf, rdlen);
-			fflush(stdout);
-
-#if 0
 #ifdef DISPLAY_STRING
 			buf[rdlen] = 0;
 			printf("Read %d: \"%s\"\n", rdlen, buf);
@@ -158,7 +181,6 @@ int main(int argc, char *argv[])
 				printf(" 0x%x", *p);
 			printf("\n");
 #endif
-#endif 
 		} else if (rdlen < 0)
 		{
 			printf("Error from read: %d: %s\n", rdlen, strerror(errno));
@@ -167,3 +189,58 @@ int main(int argc, char *argv[])
 	} while (1);
 }
 
+void packet_read_loop(int fd)
+{
+	unsigned char buf[1024];
+	int rdlen;
+
+	do
+	{
+		rdlen = read(fd, buf, sizeof(buf) - 1);
+		if (rdlen > 0)
+		{
+			print_iso16284_stream_ex(buf, rdlen);
+			fflush(stdout);
+		} 
+		else if (rdlen < 0)
+		{
+			printf("Error from read: %d: %s\n", rdlen, strerror(errno));
+		}
+	} while (1);
+}
+
+#define MAX_BUF (1024*1024)
+unsigned char buffer[MAX_BUF];
+
+void packet_save_loop(int fd, int timeout)
+{
+	int total = 0;
+
+	unsigned char buf[1024];
+	int rdlen;
+	time_t start = time(NULL);
+	time_t end = start + timeout;
+
+	printf("read loop (%d seconds)\n", timeout);
+	while ( start < end )
+	{
+		rdlen = read(fd, buf, sizeof(buf) - 1);
+		if (rdlen > 0)
+		{
+			if ( total + rdlen < sizeof(buffer) )
+			{
+				memcpy(&buffer[total], buf, rdlen);
+				total += rdlen;
+			}
+			else
+				break;
+		} 
+		else if (rdlen < 0)
+		{
+			printf("Error from read: %d: %s\n", rdlen, strerror(errno));
+		}
+		start = time(NULL);
+	} 
+
+	print_iso16284_stream_ex(buffer, total);
+}
