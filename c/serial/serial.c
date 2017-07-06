@@ -25,13 +25,12 @@ struct iso16284_code_to_str iso16284_string_table[] = {
 /// iso16284 통신 stream 출력 
 /// \param addr source buf pointer (null-terminated string)
 /// \param max
-void print_iso16284_stream_ex(void *addr, int max)
+void print_iso16284_stream_ex(unsigned char *ptr, int max)
 {
-	char * ptr = (char *)addr;
 	int reserved = 0;
 	int i, counter;
 
-	for ( counter = 0 ; *ptr && counter < max ; ptr++, counter++ ) {
+	for ( counter = 0 ; counter < max ; ptr++, counter++ ) {
 		for ( i = 0 ; iso16284_string_table[i].code >= 0; i++) {
 			if ( iso16284_string_table[i].code == *ptr ) {
 				fputs(iso16284_string_table[i].str, stdout);
@@ -127,9 +126,9 @@ int main(int argc, char *argv[])
 		print_mode = 0;
 
 	if ( print_mode )
-		fprintf(stderr, "buffering mode\n");
-	else 
 		fprintf(stderr, "print mode\n");
+	else 
+		fprintf(stderr, "buffering mode\n");
 
 	fprintf(stderr, "timeout = %d\n", timeout);
 
@@ -245,5 +244,7 @@ void packet_save_loop(int fd, int timeout)
 		start = time(NULL);
 	} 
 
+	fprintf(stderr, "total = %d\n", total);
 	print_iso16284_stream_ex(buffer, total);
+	fflush(stdout);
 }
