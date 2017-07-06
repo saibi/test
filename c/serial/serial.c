@@ -122,14 +122,14 @@ int main(int argc, char *argv[])
 
 	if ( argc > 1 )
 	{
-		if ( strcmp(argv[1], "b") == 0 ) 
+		if ( atoi(argv[1]) > 0 )
+			timeout = atoi(argv[1]);
+
+		if ( strcmp(argv[2], "b") == 0 ) 
 		{
 			print_mode = 0;
 			printf("buffering mode\n");
 		}
-
-		if ( atoi(argv[2]) > 0 )
-			timeout = atoi(argv[2]);
 	}
 
 
@@ -152,10 +152,9 @@ int main(int argc, char *argv[])
 	tcdrain(fd);	/* delay for output */
 
 	if ( print_mode ) 
-		packet_read_loop(fd);
+		packet_read_loop(fd, timeout);
 	else 
 		packet_save_loop(fd, timeout);
-
 
 
 }
@@ -189,12 +188,15 @@ void normal_read_loop(int fd)
 	} while (1);
 }
 
-void packet_read_loop(int fd)
+void packet_read_loop(int fd, int timeout)
 {
 	unsigned char buf[1024];
 	int rdlen;
+	time_t start = time(NULL);
+	time_t end = start + timeout;
 
-	do
+	printf("loop (%d seconds)\n", timeout);
+	while ( start < end )
 	{
 		rdlen = read(fd, buf, sizeof(buf) - 1);
 		if (rdlen > 0)
@@ -206,6 +208,7 @@ void packet_read_loop(int fd)
 		{
 			printf("Error from read: %d: %s\n", rdlen, strerror(errno));
 		}
+		start = time(NULL);
 	} while (1);
 }
 
@@ -221,7 +224,7 @@ void packet_save_loop(int fd, int timeout)
 	time_t start = time(NULL);
 	time_t end = start + timeout;
 
-	printf("read loop (%d seconds)\n", timeout);
+	printf("loop (%d seconds)\n", timeout);
 	while ( start < end )
 	{
 		rdlen = read(fd, buf, sizeof(buf) - 1);
