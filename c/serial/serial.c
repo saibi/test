@@ -120,17 +120,18 @@ int main(int argc, char *argv[])
 	int print_mode = 1;
 	int timeout = 60;
 
-	if ( argc > 1 )
-	{
-		if ( atoi(argv[1]) > 0 )
-			timeout = atoi(argv[1]);
+	if ( argc > 1 && atoi(argv[1]) > 0 )
+		timeout = atoi(argv[1]);
+	
+	if ( argc > 2 && strcmp(argv[2], "b") == 0 ) 
+		print_mode = 0;
 
-		if ( strcmp(argv[2], "b") == 0 ) 
-		{
-			print_mode = 0;
-			printf("buffering mode\n");
-		}
-	}
+	if ( print_mode )
+		fprintf(stderr, "buffering mode\n");
+	else 
+		fprintf(stderr, "print mode\n");
+
+	fprintf(stderr, "timeout = %d\n", timeout);
 
 
 	fd = open(portname, O_RDWR | O_NOCTTY | O_SYNC);
@@ -195,7 +196,6 @@ void packet_read_loop(int fd, int timeout)
 	time_t start = time(NULL);
 	time_t end = start + timeout;
 
-	printf("loop (%d seconds)\n", timeout);
 	while ( start < end )
 	{
 		rdlen = read(fd, buf, sizeof(buf) - 1);
@@ -224,7 +224,6 @@ void packet_save_loop(int fd, int timeout)
 	time_t start = time(NULL);
 	time_t end = start + timeout;
 
-	printf("loop (%d seconds)\n", timeout);
 	while ( start < end )
 	{
 		rdlen = read(fd, buf, sizeof(buf) - 1);
