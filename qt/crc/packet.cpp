@@ -118,9 +118,14 @@ void Packet::calcCrc()
 		return;
 	}
 
-	m_crcStr = QString(m_data.mid(idx + 4, 5));
-	m_crcStr.replace(RC_CR, "");
-	m_crcStr.replace(RC_GS, "");
+	QByteArray crcPart = m_data.mid(idx + 4);
+	crcPart.replace(RC_CR, "");
+	crcPart.replace(RC_LF, "");
+	crcPart.replace(RC_GS, "");
+	m_crcStrWithZero = QString(crcPart).trimmed();
+
+	crcPart.replace(char(0), "");
+	m_crcStr = QString(crcPart).trimmed();
 }
 
 int Packet::crc16ccitt(const char* pData, int size)

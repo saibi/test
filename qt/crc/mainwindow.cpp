@@ -24,5 +24,5 @@ void MainWindow::on_pushButton_check_clicked()
 	Packet p(ui->textEdit->toPlainText());
 	ui->textEdit_result->setText(p.getAsFormatString());
 
-	ui->lineEdit->setText(QString("%1 (CRC=%2)").arg(p.m_crcVal).arg(p.m_crcStr));
+	ui->lineEdit->setText(QString("%1 (CRC=%2) [remove 0 CRC=%3]").arg(p.m_crcVal).arg(p.m_crcStrWithZero).arg(p.m_crcStr));
 }

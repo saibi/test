@@ -32,6 +32,7 @@ public:
 
 	int m_crcVal;
 	QString m_crcStr;
+	QString m_crcStrWithZero;
 
 private:
 	QString m_text;
