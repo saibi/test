@@ -14,7 +14,6 @@ void Packet::setText(const QString &text)
 {
 	m_text = text.trimmed();
 	convertBin();
-	calcCrc();
 }
 
 
@@ -90,42 +89,65 @@ QString Packet::getAsFormatString()
 	return toFormatString(m_data);
 }
 
-void Packet::calcCrc()
+bool Packet::calcCrc(bool autoErrorCorrection)
 {
+	m_crcVal = 0;
+	m_crcStr.clear();
+
 	int idx = m_data.indexOf(RC_FS);
 	if ( idx < 0 )
 	{
-		qDebug("DBG FS not found");
-		return;
+		qDebug("[Packet::calcCrc] <FS> not found");
+		return false;
 	}
 	++idx;
 
 	int rsIdx = m_data.indexOf(RC_RS);
 	if ( rsIdx < 0 )
 	{
-		qDebug("DBG RS not found");
-		return;
+		qDebug("[Packet::calcCrc] <RS> not found");
+		return false;
 	}
 
+	// calc crc value
 	m_crcVal = crc16ccitt(m_data.constData() + idx, rsIdx - idx + 1 );
 
-	qDebug("DBG crcval = %d", m_crcVal);
+	qDebug("[Packet::calcCrc] crcval = %d", m_crcVal);
 
-	idx = m_data.indexOf("CRC=");
-	if ( idx < 0 )
+
+	// new
+	int firstCrcTextPos = rsIdx + 1;
+	QByteArray crcPart = m_data.mid(firstCrcTextPos);
+	crcPart.replace(char(RC_CR), "");
+	crcPart.replace(char(RC_LF), "");
+	crcPart.replace(char(RC_GS), "");
+	if ( autoErrorCorrection )
+		crcPart.replace(char(0), ""); // remove invalid 0
+
+	int sepIdx = crcPart.indexOf(RC_LABEL_SEP);
+	if ( sepIdx < 0 )
 	{
-		qDebug("DBG CRC field not found");
-		return;
+		qDebug("[Packet::calcCrc] no crc label separator");
+		return false;
 	}
 
-	QByteArray crcPart = m_data.mid(idx + 4);
-	crcPart.replace(RC_CR, "");
-	crcPart.replace(RC_LF, "");
-	crcPart.replace(RC_GS, "");
-	m_crcStrWithZero = QString(crcPart).trimmed();
+	QString crcLabel = crcPart.left(sepIdx).trimmed().toUpper();
+	if ( autoErrorCorrection )
+	{
+		crcLabel.replace(" ", ""); // remove invalid space
+		crcLabel.replace("\t ", ""); // remove invalid tab
+	}
 
-	crcPart.replace(char(0), "");
-	m_crcStr = QString(crcPart).trimmed();
+	if ( crcLabel != "CRC" )
+	{
+		qDebug("[Packet::calcCrc] no crc label");
+		return false;
+	}
+
+	m_crcStr = crcPart.mid(sepIdx + 1).trimmed();
+	qDebug("[Packet::calcCrc] m_crcStr = [%s]", qPrintable(m_crcStr));
+
+	return true;
 }
 
 int Packet::crc16ccitt(const char* pData, int size)

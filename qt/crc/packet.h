@@ -16,6 +16,7 @@
 #define RC_CR	0x0D // Record separator
 #define RC_LF	0x0A // Record separator
 
+#define RC_LABEL_SEP 0x3D // =
 
 class Packet
 {
@@ -30,16 +31,16 @@ public:
 	static QString toFormatString(const QByteArray & data);
 	static int crc16ccitt(const char * pData, int size);
 
+	bool calcCrc(bool autoErrorCorrection = false);
+
 	int m_crcVal;
 	QString m_crcStr;
-	QString m_crcStrWithZero;
 
 private:
 	QString m_text;
 	QByteArray m_data;
 
 	void convertBin();
-	void calcCrc();
 };
 
 #endif // PACKET_H
