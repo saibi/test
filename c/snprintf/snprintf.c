@@ -4,6 +4,10 @@ int main(void)
 {
 	int ret ;
 	char buf[4];
+	char test[128];
+
+	ret = sprintf(test, "hello %s", "world");
+	printf("ret = %d, [%s]\n", ret, test);
 
 	ret = snprintf(buf, sizeof(buf), "hello %.2f world !!!", 18.18);
 
