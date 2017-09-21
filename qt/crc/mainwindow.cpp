@@ -8,6 +8,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
 	ui->setupUi(this);
 
+	ui->textEdit->setText("Copy & paste log message here : <FS> ...... <GS>");
+
 	//ui->textEdit->setText(QString("16 test %1").arg(int(3), 2, 16, QChar('0')));
 
 	connect(ui->pushButton_close, SIGNAL(clicked()), qApp, SLOT(quit()));

@@ -109,6 +109,14 @@ bool Packet::calcCrc(bool autoErrorCorrection)
 		return false;
 	}
 
+	if ( m_data.indexOf(RC_GS) < 0 )
+	{
+		qDebug("[Packet::calcCrc] <GS> not found");
+
+		if ( !autoErrorCorrection )
+			return false;
+	}
+
 	// calc crc value
 	m_crcVal = crc16ccitt(m_data.constData() + idx, rsIdx - idx + 1 );
 
